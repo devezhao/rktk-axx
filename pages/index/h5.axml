@@ -1,0 +1,6 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <web-view src='{{url}}' onMessage='h5Message'>
+  </web-view>
+</view>
+            </view>

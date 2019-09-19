@@ -1,0 +1,167 @@
+.page-container-classname,
+.page {
+    background-color: #fff;
+}
+
+.top-block {
+    background-color: #a18d62;
+    padding: 1px;
+    border: 0 none;
+}
+
+.weui-cells__title {
+    padding-left: 0;
+    color: #777;
+}
+
+.tt {
+    border: 1rpx solid #a18d62;
+    color: #a18d62;
+    padding: 8px 9px;
+    border-radius: 2px;
+    position: relative;
+    font-size: 15px;
+}
+
+.tt:active {
+    background-color: #f7f7f9;
+}
+
+.tt + .tt {
+    border-top-width: 0;
+    border-radius: 0 0 2px 2px;
+}
+
+.tt.L1 {
+    border-radius: 2px 2px 0 0;
+}
+
+.tt .weui-cell__ft_in-access:after {
+    border-color: #a18d62;
+    margin-top: -16px;
+}
+
+.fix-foobar.btns {
+    background-color: #555;
+    border: 0 none;
+    color: #fff;
+}
+
+.fix-foobar.btns .pull-right button {
+    background-color: #a18d62;
+    color: #fff;
+    width: 140px;
+    border: 0 none;
+    border-top: 1px solid #a18d62;
+}
+
+.fix-foobar.btns .pull-left {
+    padding-left: 14px;
+    line-height: 1.2;
+}
+
+.fix-foobar.btns .pull-left .T1 {
+    font-size: 18px;
+    padding-top: 4px;
+}
+
+.fix-foobar.btns .pull-left .T1 text {
+    font-size: 14px;
+}
+
+.fix-foobar.btns .pull-left .T2 {
+    font-size: 11px;
+    color: #eee;
+}
+
+.fix-foobar.btns .pull-left .del {
+    margin-left: 9px;
+    display: inline-block;
+    text-decoration: line-through;
+    font-size: 15px;
+}
+
+.vip-level {
+    text-align: center;
+    margin-bottom: 14px;
+    margin-top: -6px;
+}
+
+.vip-level view {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    padding: 4px 9px;
+    line-height: 1;
+    margin: 3px 0;
+    border-radius: 99px;
+    font-size: 12px;
+}
+
+.coupon {
+    width: 100%;
+    background-color: #eee;
+    margin-bottom: 12px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.coupon .money {
+    background-color: #f76260;
+    width: 76px;
+    height: 70px;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    line-height: 68px;
+    border-right: 2px dotted #fff;
+}
+
+.coupon .ctext {
+    padding-left: 14px;
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.coupon .ctext view {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.tt {
+    position: relative;
+}
+
+.tt .level text,
+.tt .price text {
+    display: block;
+    font-size: 11px;
+    margin-top: -4px;
+}
+
+.tt .price {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.tt .price text {
+    text-decoration: line-through;
+    color: #ec5353;
+}
+
+.tt .o {
+    position: absolute;
+    background-color: #a18d62;
+    width: 18px;
+    height: 18px;
+    right: 0;
+    top: 0;
+    line-height: 1;
+    text-align: center;
+}
+
+button[type="default"][disabled] {
+    opacity: 0.9;
+}

@@ -1,0 +1,129 @@
+.page-container-classname,
+.page {
+    background-color: #fff;
+}
+
+.wave {
+    height: 64px;
+    background-color: #4b8ef9;
+}
+
+.wave-top {
+    margin: 14px;
+    background-color: #fff;
+    margin-top: -50px;
+    min-height: 100px;
+    box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 9px;
+    padding-top: 18px;
+}
+
+.circle,
+.circle-scope {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.circle {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-scope {
+    position: absolute;
+    color: #09bb07;
+    font-size: 34px;
+    text-align: center;
+    line-height: 1.25;
+    padding-top: 20px;
+}
+
+.circle-scope text {
+    font-size: 13px;
+    display: inline-block;
+}
+
+.circle-scope view {
+    font-size: 13px;
+    color: #999;
+}
+
+.exam-info {
+    text-align: center;
+    padding: 0 9px;
+    padding-bottom: 18px;
+}
+
+.exam-info .weui-flex__item {
+    padding: 0;
+}
+
+.exam-info .weui-flex__item view {
+    border-left: 1rpx solid #d9d9d9;
+    border-right: 1rpx solid #d9d9d9;
+}
+
+.exam-info text {
+    display: block;
+    color: #999;
+    line-height: 1;
+    font-size: 13px;
+}
+
+.exam-info text.s {
+    color: #333;
+    font-size: 21px;
+    margin-bottom: 4px;
+}
+
+.weui-navbar {
+    border-bottom: 0 none;
+    width: 300px;
+    margin-left: -150px;
+    left: 50%;
+}
+
+.weui-navbar__item {
+    padding: 8px 0;
+}
+
+.weui-media-box__title {
+    font-size: 15px;
+}
+
+.btn-tabs {
+    text-align: center;
+}
+
+.btn-tabs .tab {
+    width: 111px;
+    background-color: #eee;
+    border-radius: 99px;
+    display: inline-block;
+    padding: 9px 0;
+    margin: 4px 4px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.btn-tabs .tab:active {
+    background-color: #ddd;
+}
+
+.btn-tabs .tab.on {
+    background-color: #4b8ef9;
+    color: #fff;
+}
+
+.weui-media-box__info__meta {
+    padding-right: 8px;
+}
+
+.weui-media-box.rktk-record .weui-media-box__info {
+    margin-top: 4px;
+    color: #999;
+    font-size: 13px;
+}

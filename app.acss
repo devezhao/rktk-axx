@@ -1,0 +1,603 @@
+@import "/__antmove/static/app.acss";
+@import "./libs/weui.acss";
+page,
+.page {
+    background-color: #f7f7f9;
+    font-size: 14px;
+    font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.page__bd {
+    margin: 0 14px;
+    padding: 0;
+}
+
+.page__hd {
+    margin: 0;
+    padding: 0;
+}
+
+.navigator-hover {
+    background-color: transparent;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+.base-hover {
+    opacity: 0.8;
+}
+
+.center {
+    text-align: center;
+}
+
+.top-block {
+    padding: 24px 14px;
+    background-color: #fff;
+    border-bottom: 1rpx solid #d9d9d9;
+    text-align: center;
+}
+
+.top-block view.title {
+    font-size: 21px;
+    color: #222;
+}
+
+.top-block view.subtitle {
+    font-size: 14px;
+    color: #999;
+}
+
+.top-block view.subtitle.infos {
+    color: #666;
+    margin-top: 3px;
+}
+
+.top-block view.subtitle.infos text {
+    color: #cecece;
+    margin: 0 3px;
+}
+
+.fix-foobar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.fix-foobar button {
+    font-size: 17px;
+}
+
+.fix-foobar.btns {
+    margin: 0;
+}
+
+.fix-foobar.btns button {
+    border-radius: 0;
+}
+
+.fix-foobar.btns button[type="default"] {
+    border-top: 1rpx solid #d9d9d9;
+}
+
+.float-btns {
+    bottom: 66px;
+    right: 14px;
+    position: fixed;
+    z-index: 19;
+}
+
+.zbtn {
+    border: 1px solid #4b8ef9;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    margin-bottom: 9px;
+}
+
+.zbtn:active {
+    background-color: #eee;
+}
+
+.zbtn image {
+    width: 36px;
+    height: 36px;
+    margin-top: 3px;
+}
+
+.zbtn image.share {
+    margin-top: 8px;
+    width: 26px;
+    height: 26px;
+}
+
+.zbtn image.fav {
+    margin-top: 6px;
+    width: 28px;
+    height: 28px;
+}
+
+.zbtn text {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 42px;
+    color: #4b8ef9;
+}
+
+.zbtn text.L2 {
+    font-size: 13px;
+    line-height: 14px;
+    margin-top: 9px;
+}
+
+.zbtn.active {
+    background-color: #4b8ef9;
+}
+
+.zbtn.active,
+.zbtn.active text {
+    color: #fff;
+}
+
+.zbtn.active:active {
+    opacity: 0.8;
+}
+
+button,
+button::after,
+.weui-btn {
+    border: 0 none;
+    border-radius: 2px;
+}
+
+button[type="primary"] {
+    background-color: #4b8ef9 !important;
+}
+
+button[type="primary"][disabled] {
+    opacity: 0.9;
+}
+
+button[type="default"] {
+    color: #000;
+    background-color: #fff;
+}
+
+.button-hover {
+    opacity: 0.8;
+}
+
+button.T2 {
+    background-color: #ec5353;
+}
+
+button.T2.button-hover {
+    background-color: #ec5353;
+    opacity: 0.8;
+}
+
+.weui-cell {
+    padding: 10px 14px;
+}
+
+.icon-box {
+    margin-top: 38.5%;
+    text-align: center;
+}
+
+.icon-box__title {
+    font-size: 18px;
+    margin-top: 14px;
+    color: #333;
+}
+
+.icon-box__desc {
+    margin: 6px auto;
+    font-size: 15px;
+    color: #777;
+    width: 88%;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+    color: #ec5353;
+}
+
+.weui-navbar__slider {
+    background-color: #ec5353;
+}
+
+image.x36 {
+    width: 36px;
+    height: 36px;
+}
+
+image.x34 {
+    width: 34px;
+    height: 34px;
+}
+
+image.x32 {
+    width: 32px;
+    height: 32px;
+}
+
+image.x30 {
+    width: 30px;
+    height: 30px;
+}
+
+image.x28 {
+    width: 28px;
+    height: 28px;
+}
+
+image.x26 {
+    width: 26px;
+    height: 26px;
+}
+
+image.x24 {
+    width: 24px;
+    height: 24px;
+}
+
+.weui-panel__hd {
+    padding: 14px 14px 10px;
+}
+
+.weui-media-box {
+    padding: 14px;
+}
+
+.weui-media-box.rktk-record .weui-media-box__info {
+    margin-top: 7px;
+    color: #888;
+}
+
+.weui-media-box.rktk-record .weui-media-box__info text {
+    color: #444;
+}
+
+.weui-media-box.rktk-record .weui-media-box__title.has-btn-more {
+    padding-right: 15px;
+}
+
+.weui-media-box.rktk-record .btn-more {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    background-color: #fff;
+    width: 30px;
+    height: 28px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.weui-media-box.rktk-record .btn-more image {
+    width: 20px;
+    height: 20px;
+}
+
+.color-base1,
+.color-base {
+    color: #4b8ef9 !important;
+}
+
+.color-base2,
+.color-high {
+    color: #ec5353 !important;
+}
+
+.color-link {
+    color: #586c94;
+}
+
+.color-link:active {
+    color: #586c94;
+    opacity: 0.8;
+}
+
+.tag-vip {
+    color: #ec5353 !important;
+    font-size: 10px;
+    line-height: 1;
+    padding: 0px 4px;
+    border-radius: 3px;
+    border: 1px solid #ec5353;
+}
+
+.tipsbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    text-align: center;
+}
+
+.tipsbar view {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 9px 18px;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 6px;
+    min-width: 80px;
+    max-width: 80%;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-17 {
+    font-size: 17px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.weui-cell__ft_in-access.min {
+    padding-right: 11px;
+}
+
+.weui-cell__ft_in-access.min:after {
+    border-width: 1px 1px 0 0;
+    height: 6px;
+    width: 6px;
+}
+
+button.btn-mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 98;
+}
+
+/* 题目样式 START */
+
+.qimg-gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    max-width: 100%;
+    line-height: 1;
+    filter: gray;
+}
+
+.qa-space {
+    color: #333;
+    display: inline-block;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.qa-space .qa {
+    border-bottom: 1px solid #444;
+    min-width: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.qsubtitle {
+    margin: 0px 0;
+    font-size: 14px;
+    color: #777;
+    display: inline-block;
+}
+
+@font-face {
+    font-family: "codefont";
+    src: url("https://cdn.chinaruankao.com/a/fonts/consola-v3/consola.eot");
+    src: url("https://cdn.chinaruankao.com/a/fonts/consola-v3/consola.eot?#iefix")
+            format("embedded-opentype"),
+        url("https://cdn.chinaruankao.com/a/fonts/consola-v3/consola.woff")
+            format("woff"),
+        url("https://cdn.chinaruankao.com/a/fonts/consola-v3/consola.ttf")
+            format("truetype"),
+        url("https://cdn.chinaruankao.com/a/fonts/consola-v3/consola.svg#consola")
+            format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.qcode-box {
+    font-family: "codefont";
+    background-color: #eee;
+    padding: 6px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 3px 0;
+}
+
+.qcode-box .em {
+    color: #aaa;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.table-warp {
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.table {
+    min-width: 100%;
+    border: 1px solid #d9d9d9;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 3px 0;
+    margin-bottom: 5px;
+}
+
+.td {
+    border: 1px solid #d9d9d9;
+    vertical-align: top;
+    padding: 3px 6px;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+/* 题目样式 END */
+
+.highbar {
+    margin: 0 14px;
+    background-color: #fefcec;
+    padding: 6px 14px;
+    margin-top: 13px;
+    color: #f87c3d;
+    font-size: 13px;
+    border-radius: 99px;
+    position: relative;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.highbar .weui-cell__ft_in-access {
+    position: absolute;
+    right: 12px;
+    margin-top: -10px;
+}
+
+.highbar.icon {
+    padding-left: 32px;
+}
+
+.highbar.icon icon {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+
+.highbar.red {
+    background-color: #f96260;
+    color: #fff;
+}
+
+.highbar.red .weui-cell__ft_in-access:after {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.weui-btn.link {
+    font-size: 15px;
+    color: #586c94;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background-color: transparent;
+    line-height: 1.4;
+}
+
+.foot-count {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    padding: 12px 0;
+    position: relative;
+}
+
+.foot-count icon {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -9px;
+}
+
+.foot-count text {
+    display: inline-block;
+    padding-left: 9px;
+}
+
+.weui-panel__compact .weui-panel {
+    margin-top: 6px;
+}
+
+.weui-panel__compact .weui-panel:first-child {
+    margin-top: 0;
+}
+
+.arrow.up {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #2f2f2f;
+    font-size: 0px;
+    line-height: 0px;
+}
+
+.tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.tooltip .tooltip-inner {
+    position: relative;
+}
+
+.tooltip .tooltip-inner .arrow.up {
+    border-bottom-color: rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+    position: absolute;
+    top: -5px;
+}
+
+.tooltip .tooltip-inner .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 3px;
+    line-height: 1;
+    margin-top: 5px;
+}

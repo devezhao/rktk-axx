@@ -1,0 +1,41 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <view class='page__bd' a:if='{{rankList}}'>
+    <view class='rank_item' a:for='{{rankList}}' a:key='*this' ref-numbers='{{rankList}}'>
+      <view class='pull-left icon'>
+        <image a:if='{{item[3] == 1}}' src='/images/pk/live_reward_1.png'>
+        </image>
+        <image a:if='{{item[3] == 2}}' src='/images/pk/live_reward_2.png'>
+        </image>
+        <image a:if='{{item[3] == 3}}' src='/images/pk/live_reward_3.png'>
+        </image>
+        <view a:if='{{item[3] > 3}}'>
+          {{item[3]}}
+        </view>
+      </view>
+      <view class='pull-left headimg'>
+        <image src='{{item[0]}}'>
+        </image>
+      </view>
+      <view class='pull-left user'>
+        <view>
+          {{item[1]}}
+        </view>
+        <text>
+          {{item[2]}}
+        </text>
+      </view>
+      <view class='pull-right scope'>
+        {{item[4]}}
+      </view>
+      <view class='clearfix'>
+      </view>
+    </view>
+  </view>
+  <view class='page__bd' a:if='{{rankList}}'>
+    <view style='margin-top:11px;padding-bottom:11px;text-align:center;font-size:12px;color:rgba(0,0,0,0.4);'>
+      数据 08:00~00:00 每 15 分钟更新一次
+    </view>
+  </view>
+</view>
+            </view>

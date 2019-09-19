@@ -1,0 +1,47 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <view class='page__hd'>
+    <view class='weui-tab'>
+      <view class='weui-navbar'>
+        <block a:for='{{tabs}}' a:key='*this' ref-numbers='{{tabs}}'>
+          <view id='{{index}}' class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" onTap='loadRecords'>
+            <view class='weui-navbar__title'>
+              {{item}}
+            </view>
+          </view>
+        </block>
+        <view class='weui-navbar__slider' style='left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);'>
+        </view>
+      </view>
+      <view class='weui-tab__panel weui-panel__compact'>
+        <view class='weui-panel' a:for='{{records}}' a:key='*this' ref-numbers='{{records}}'>
+          <view class='weui-panel__bd'>
+            <view class='weui-media-box rktk-record'>
+              <view class='weui-media-box__title'>
+                {{item[0]}}
+              </view>
+              <view class='weui-media-box__info'>
+                <view class='weui-media-box__info__meta'>
+                  {{item[3]}}
+                </view>
+                <view class='weui-media-box__info__meta weui-media-box__info__meta_extra'>
+                  {{item[2]}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='page__bd'>
+    <view class='icon-box' hidden='{{!nodata}}'>
+      <icon type='info' size='{{88}}' class=' iconinfo-style 88-style'>
+      </icon>
+      <view class='icon-box__title'>
+        暂无记录
+      </view>
+    </view>
+  </view>
+</view>
+            </view>

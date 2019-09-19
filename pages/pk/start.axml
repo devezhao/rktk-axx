@@ -1,0 +1,151 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <view class='page__bd user-meta'>
+    <view class='headimg'>
+      <image src='{{headimgUrl}}' alt='头像'>
+      </image>
+    </view>
+    <view class='nick'>
+      {{nick || '-'}}
+    </view>
+  </view>
+  <view class='page__bd user-scope'>
+    <view class='weui-flex'>
+      <view class='weui-flex__item'>
+        <view>
+          {{scope || 0}}
+        </view>
+        <text>
+          总分数
+        </text>
+        <view class='line'>
+        </view>
+      </view>
+      <view class='weui-flex__item'>
+        <view>
+          {{pk_times || 0}}
+        </view>
+        <text>
+          PK次数
+        </text>
+        <view class='line'>
+        </view>
+      </view>
+      <view class='weui-flex__item'>
+        <view>
+          {{win_rate || 0}}          <text>
+            %
+          </text>
+        </view>
+        <text>
+          胜率
+        </text>
+      </view>
+    </view>
+  </view>
+  <view class='page__bd' style='padding:9px 0;'>
+    <view class='weui-flex'>
+      <view class='weui-flex__item'>
+        <view class='card animated fadeInLeft d1s' hover-class='base-hover' onTap='dialogOpen'>
+          <view>
+            进入房间
+          </view>
+          <text>
+            输入房间号开始对战
+          </text>
+        </view>
+      </view>
+      <view class='weui-flex__item'>
+        <view class='card animated fadeInRight d1s bg-red' hover-class='base-hover' onTap='checkReady'>
+          <view>
+            点击邀好友PK
+          </view>
+          <text>
+            {{subject}}
+          </text>
+          <button open-type='share' class='btn-mask' a:if='{{hasError == null}}'>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style='text-align:center;' a:if='{{hdTitle}}'>
+    <navigator url='/pages/index/h5?url=m%2ffaq.htm%3fk%3dpk-gift' style='color:#fb0;display:inline-block;font-size:14px'>
+      [ {{hdTitle || '软考PK赛奖励规则'}} ]
+    </navigator>
+  </view>
+  <view class='page__bd' a:if='{{rankList}}' style='margin-top:15px'>
+    <view class='rank_title'>
+      本周排名
+    </view>
+    <view class='sline'>
+    </view>
+    <view class='rank_subtitle'>
+      我的本周得分 {{week_rank[1] || 0}} 排行 {{week_rank[0] || 9999}}
+    </view>
+    <view class='rank_item' a:for='{{rankList}}' a:key='*this' ref-numbers='{{rankList}}'>
+      <view class='pull-left icon'>
+        <image a:if='{{item[3] == 1}}' src='/images/pk/live_reward_1.png'>
+        </image>
+        <image a:elif='{{item[3] == 2}}' src='/images/pk/live_reward_2.png'>
+        </image>
+        <image a:elif='{{item[3] == 3}}' src='/images/pk/live_reward_3.png'>
+        </image>
+        <view a:else >
+          {{item[3]}}
+        </view>
+      </view>
+      <view class='pull-left headimg'>
+        <image src='{{item[0]}}'>
+        </image>
+      </view>
+      <view class='pull-left user'>
+        <view>
+          {{item[1]}}
+        </view>
+        <text>
+          {{item[2]}}
+        </text>
+      </view>
+      <view class='pull-right scope'>
+        {{item[4]}}
+      </view>
+      <view class='clearfix'>
+      </view>
+    </view>
+    <view style='text-align:center;margin-top:14px;' a:if='{{rankList && rankList.length > 2}}'>
+      <navigator url='rank'>
+        [ 查看更多 ]
+      </navigator>
+    </view>
+    <view class='rank_item' a:if='{{rankList && rankList.length == 0}}'>
+      <view style='text-align:center;padding-top:18px'>
+        榜单计算中
+      </view>
+    </view>
+  </view>
+</view><view id='dialog' hidden='{{dialogHide}}'>
+  <view class='mask'>
+  </view>
+  <view class='dialog'>
+    <view class='text' style='padding-bottom:28px'>
+      <input class='weui-input' placeholder-class='weui-input-placeholder' type='number' maxlength='{{6}}' placeholder='输入房间号' focus='{{inputFocus}}' data-id='roomNo' onInput='inputTake'>
+      </input>
+    </view>
+    <view class='btns'>
+      <view class='pull-left'>
+        <button class='weui-btn' style='color:#222' onTap='dialogClose'>
+          取消
+        </button>
+      </view>
+      <view class='pull-right'>
+        <button class='weui-btn' onTap='enterRoom'>
+          进入房间
+        </button>
+      </view>
+      <view class='clearfix'>
+      </view>
+    </view>
+  </view>
+</view>
+            </view>

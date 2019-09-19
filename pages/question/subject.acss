@@ -1,0 +1,31 @@
+@import "../comps/z-sharebox.acss";
+.fix-foobar .pull-left {
+    width: 50%;
+}
+
+.fix-foobar .pull-left button {
+    border-radius: 0;
+    border-top: 1px solid #4b8ef9;
+}
+
+.fix-foobar .pull-left button.split {
+    border-left: 1rpx solid #eee;
+}
+
+.xfree {
+    position: relative;
+}
+
+.xfree text {
+    position: absolute;
+    font-size: 12px;
+    color: #ec5353;
+    margin-left: 2px;
+}
+
+.highbar.warn {
+    box-shadow: 0 0 0 #fff;
+    background-color: #ebccd1;
+    color: #a94442;
+    text-align: center;
+}

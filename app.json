@@ -1,0 +1,84 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/index/about",
+		"pages/index/h5",
+		"pages/index/tips",
+		"pages/index/auth",
+		"pages/question/subject-choice",
+		"pages/question/subject-list",
+		"pages/question/subject",
+		"pages/question/subject-ai",
+		"pages/exam/exam",
+		"pages/exam/exam-result",
+		"pages/exam/explain",
+		"pages/exam/explain-rich",
+		"pages/exam/exam-report",
+		"pages/my/home",
+		"pages/my/my-exams",
+		"pages/my/my-unexam",
+		"pages/my/my-favs",
+		"pages/my/incorrects",
+		"pages/my/coin-buy",
+		"pages/my/coin-records",
+		"pages/my/vip-buy",
+		"pages/my/vip-buy-ios",
+		"pages/my/vip-buy-gift",
+		"pages/my/user-reg",
+		"pages/my/settings",
+		"pages/acts/share-guide",
+		"pages/acts/keep-days",
+		"pages/pk/start",
+		"pages/pk/rank",
+		"pages/pk/room-wait",
+		"pages/pk/room-pk",
+		"pages/my/vip-snactive"
+	],
+	"window": {
+		"navigationBarTextStyle": "white",
+		"backgroundTextStyle": "dark",
+		"backgroundColor": "#f7f7f9",
+		"titleBarColor": "#4b8ef9",
+		"defaultTitle": "软考必备",
+		"pullRefresh": false
+	},
+	"tabBar": {
+		"backgroundColor": "#ffffff",
+		"selectedColor": "#4b8ef9",
+		"textColor": "#555",
+		"items": [
+			{
+				"pagePath": "pages/index/index",
+				"name": "首页",
+				"icon": "images/icon-home.png",
+				"activeIcon": "images/icon-home-s.png"
+			},
+			{
+				"pagePath": "pages/question/subject-list",
+				"name": "题库",
+				"icon": "images/icon-subject.png",
+				"activeIcon": "images/icon-subject-s.png"
+			},
+			{
+				"pagePath": "pages/pk/start",
+				"name": "PK榜",
+				"icon": "images/pk/icon-pk2.png",
+				"activeIcon": "images/pk/icon-pk2-s.png"
+			},
+			{
+				"pagePath": "pages/my/home",
+				"name": "我",
+				"icon": "images/icon-user.png",
+				"activeIcon": "images/icon-user-s.png"
+			}
+		]
+	},
+	"networkTimeout": {
+		"request": 10000,
+		"connectSocket": 10000,
+		"uploadFile": 60000,
+		"downloadFile": 60000
+	},
+	"debug": false,
+	"sitemapLocation": "sitemap.json"
+}

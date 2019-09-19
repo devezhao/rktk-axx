@@ -1,0 +1,138 @@
+.user-block {
+    padding: 14px;
+    position: relative;
+    background-color: #4b8ef9;
+    color: #fff;
+}
+
+.user-block .headimg {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    border: 3px solid rgba(0, 0, 0, 0.12);
+}
+
+.user-block .headimg image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.user-block .nick {
+    font-size: 16px;
+    margin-left: 9px;
+    padding-top: 10px;
+    line-height: 1.2;
+}
+
+.user-block .nick navigator {
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 4px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.user-block .nick navigator:after {
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.tags {
+    position: absolute;
+    right: 9px;
+    top: 10px;
+}
+
+.tags view {
+    font-size: 11px;
+    padding: 3px 6px;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 99px;
+    margin-left: 6px;
+    background-color: #fff;
+    color: #444;
+}
+
+.tags view:active {
+    opacity: 0.8;
+}
+
+.tags view.mobile {
+    background-color: transparent;
+    padding: 0;
+    padding-top: 4px;
+    position: absolute;
+    margin-left: -16px;
+}
+
+.tags view.mobile image {
+    width: 17px;
+    height: 17px;
+}
+
+.weui-cells {
+    margin-top: 14px;
+}
+
+.rktk .weui-cell__hd image {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 13px;
+}
+
+.rktk .weui-cell__bd {
+    margin-left: 27px;
+}
+
+.vip {
+    background-color: #a18d62;
+}
+
+.vip .tags text {
+    color: #a18d62;
+}
+
+.study-info {
+    background-color: #fff;
+    border-bottom: 1rpx solid #d9d9d9;
+    text-align: center;
+}
+
+.study-info .weui-flex__item {
+    padding: 16px 0;
+}
+
+.study-info .weui-flex__item:active {
+    background-color: #ececec;
+}
+
+.study-info .weui-flex__item view {
+    border-left: 1rpx solid #d9d9d9;
+    border-right: 1rpx solid #d9d9d9;
+}
+
+.study-info text {
+    display: block;
+    color: #888;
+    line-height: 1;
+    font-size: 14px;
+}
+
+.study-info text.s {
+    color: #333;
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+.weui-cell__ft-tag {
+    font-size: 13px;
+    position: absolute;
+    right: 13px;
+    margin-top: -8px;
+    color: #ec5353;
+    text-align: right;
+    width: 100px;
+}

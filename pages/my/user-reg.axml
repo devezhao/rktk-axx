@@ -1,0 +1,38 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <view class='highbar' a:if='{{bind}}'>
+    当前已绑定 {{bind}}
+  </view>
+  <view class='page__hd'>
+    <view class='weui-cells__title'>
+      {{bind ? '换绑' : '绑定'}}手机
+    </view>
+    <view class='weui-cells weui-cells_after-title'>
+      <view class='weui-cell weui-cell_input'>
+        <view class='weui-cell__bd'>
+          <input class='weui-input' type='number' placeholder='手机号码' maxlength='{{11}}' data-id='mobile' onInput='inputTake'>
+          </input>
+        </view>
+      </view>
+      <view class='weui-cell weui-cell_input weui-cell_vcode'>
+        <view class='weui-cell__bd'>
+          <input class='weui-input' type='number' placeholder='验证码' maxlength='{{6}}' data-id='vcode' onInput='inputTake'>
+          </input>
+        </view>
+        <view class='weui-cell__ft'>
+          <view class='weui-vcode-btn color-link' onTap='sendVcode'>
+            {{waitVcode || '获取验证码'}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='weui-btn-area'>
+      <form report-submit='true' onSubmit='bindMobile'>
+        <button class='weui-btn primary-style' type='primary' formType='submit' disabled='{{inputBad}}'>
+          确定
+        </button>
+      </form>
+    </view>
+  </view>
+</view>
+            </view>

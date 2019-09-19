@@ -1,0 +1,36 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <view class='page__hd weui-panel__compact'>
+    <view class='weui-panel' a:for='{{listData}}' a:key='*this' ref-numbers='{{listData}}'>
+      <view class='weui-panel__bd'>
+        <navigator url="../exam/{{item[5] == 1 ? 'explain' : 'explain-rich'}}?id={{item[0]}}" class='weui-media-box rktk-record'>
+          <view class='weui-media-box__title has-btn-more'>
+            {{item[1]}}
+          </view>
+          <view class='weui-media-box__info'>
+            <view class='weui-media-box__info__meta'>
+              {{item[2]}} 第{{item[4]}}题
+            </view>
+            <view class='weui-media-box__info__meta weui-media-box__info__meta_extra hide'>
+              {{item[3]}}
+            </view>
+          </view>
+          <view class='btn-more' data-id='{{item[0]}}' catchTap='moreAction'>
+            <image src='/images/action-more2.png'>
+            </image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class='page__bd'>
+    <view class='icon-box' hidden='{{!nodata}}'>
+      <icon type='info' size='{{88}}' class=' iconinfo-style 88-style'>
+      </icon>
+      <view class='icon-box__title'>
+        暂无收藏
+      </view>
+    </view>
+  </view>
+</view>
+            </view>

@@ -1,0 +1,119 @@
+<view class='page-container-classname'>
+                <view class='page {{miniScreen}}' style='height:{{pageHeight}}px' ref='saveChildRef0'>
+  <view class='page__hd act-users'>
+    <view class='user foo animated slideInLeft'>
+      <view class='headimg'>
+        <image src='{{fooHeadimg}}'>
+        </image>
+      </view>
+      <view class='nick'>
+        {{fooNick}}
+      </view>
+    </view>
+    <view class='user bar animated slideInRight'>
+      <view class='headimg'>
+        <image src='{{barHeadimg}}'>
+        </image>
+      </view>
+      <view class='nick'>
+        {{barNick}}
+      </view>
+    </view>
+    <view a:if='{{showResult}}' class='user foo r-scope animated slideInLeft'>
+      <view class='headimg' style='width:{{fooScopeWidth}}px'>
+        <text>
+          {{fooScope || '0'}}分
+        </text>
+      </view>
+    </view>
+    <view a:if='{{showResult}}' class='user bar r-scope animated slideInRight'>
+      <view class='headimg' style='width:{{barScopeWidth}}px'>
+        <text>
+          {{barScope || '0'}}分
+        </text>
+      </view>
+    </view>
+    <view class='countdown' a:if='{{countdown != null}}'>
+      <text>
+        {{countdown}}
+      </text>
+    </view>
+  </view>
+  <view class='page__hd' hidden='{{showResult == true}}' a:if='{{question}}'>
+    <view class='question {{questionClazz}} {{showClazz}}' style='height:{{questionHeight}}px'>
+      <custom-rich-text nodes='{{question}}'>
+      </custom-rich-text>
+    </view>
+    <view class='answers'>
+      <view class='scope foo'>
+        <view class='num {{fooScopeClazz}}'>
+          {{fooScope || 0}}
+        </view>
+        <view class='progress'>
+          <view style='height:{{fooScope * 100 / 120}}%'>
+          </view>
+        </view>
+      </view>
+      <view class='scope bar'>
+        <view class='num {{barScopeClazz}}'>
+          {{barScope || 0}}
+        </view>
+        <view class='progress'>
+          <view style='height:{{barScope * 100 / 120}}%'>
+          </view>
+        </view>
+      </view>
+      <view class='items {{showClazz}}' a:if='{{!!answer}}'>
+        <view class="a {{answer[0][0] == selectKey ? 'select' : ''}} {{answer[0][0] == rightKey ? 'Y' : 'N'}}" data-key='{{answer[0][0]}}' onTap='selectAnswer'>
+          <view>
+            {{answer[0][1] || 'A'}}
+          </view>
+        </view>
+        <view class="a {{answer[1][0] == selectKey ? 'select' : ''}} {{answer[1][0] == rightKey ? 'Y' : 'N'}}" data-key='{{answer[1][0]}}' onTap='selectAnswer'>
+          <view>
+            {{answer[1][1] || 'B'}}
+          </view>
+        </view>
+        <view class="a {{answer[2][0] == selectKey ? 'select' : ''}} {{answer[2][0] == rightKey ? 'Y' : 'N'}}" data-key='{{answer[2][0]}}' onTap='selectAnswer'>
+          <view>
+            {{answer[2][1] || 'C'}}
+          </view>
+        </view>
+        <view class="a {{answer[3][0] == selectKey ? 'select' : ''}} {{answer[3][0] == rightKey ? 'Y' : 'N'}}" data-key='{{answer[3][0]}}' onTap='selectAnswer'>
+          <view>
+            {{answer[3][1] || 'D'}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='q-source'>
+      {{sourceSubject || ''}}
+    </view>
+  </view>
+  <view hidden='{{showResult == false}}' style='margin-top:-12px' class='animated fadeIn'>
+    <view class="mask {{isWin ? 'win' : ''}}">
+    </view>
+    <view class='win-img' style='z-index:999'>
+      <image class='user' src='{{fooHeadimg}}'>
+      </image>
+      <view>
+        <image class='banner' src="/images/pk/{{isWin ? 'result_win.png' : 'result_lost.png'}}">
+        </image>
+      </view>
+    </view>
+    <view class='op-btns'>
+      <button type='button' open-type='share' class=' button-style'>
+        分享战绩
+      </button>
+      <button type='button' class=' button-style' onTap='beginPk'>
+        再来一局
+      </button>
+      <button type='button' class='exp button-style' onTap='explainGo'>
+        <image src='/images/pk/ic_txt2.png'>
+        </image>
+        查看题目解析
+      </button>
+    </view>
+  </view>
+</view>
+            </view>

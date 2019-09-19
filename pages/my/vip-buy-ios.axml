@@ -1,0 +1,79 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <view class='page__hd'>
+    <view class='weui-form-preview'>
+      <view class='weui-form-preview__hd'>
+        <view class='weui-form-preview__item'>
+          <view class='weui-form-preview__label'>
+            支付金额
+          </view>
+          <view class='weui-form-preview__value_in-hd'>
+            ¥{{fee || '0'}}
+          </view>
+        </view>
+      </view>
+      <view class='weui-form-preview__bd'>
+        <view class='weui-form-preview__item'>
+          <view class='weui-form-preview__label'>
+            开通会员
+          </view>
+          <view class='weui-form-preview__value'>
+            {{userNick || '-'}}
+          </view>
+        </view>
+        <view class='weui-form-preview__item'>
+          <view class='weui-form-preview__label'>
+            开通类型
+          </view>
+          <view class='weui-form-preview__value'>
+            {{subject || '-'}}
+          </view>
+        </view>
+        <view class='weui-form-preview__item'>
+          <view class='weui-form-preview__label'>
+            状态
+          </view>
+          <view class='weui-form-preview__value'>
+            未支付
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='page__bd pay-btns'>
+    <block a:if='{{isIOS}}'>
+      <button type='primary' open-type='share' class='T2 primary-style' disabled='{{btnDisabled}}'>
+        请好友代付
+      </button>
+      <view class='color-link scan' onTap='showPayQrcode'>
+        扫码支付
+      </view>
+      <view class='highbar icon'>
+        <icon type='warn' size='{{14}}' color='#f87c3d' class=' iconwarn-style 14-style'>
+        </icon>
+        受苹果/微信支付政策影响，暂不支持在 iOS 设备支付。你可邀请好友或通过安卓手机支付。
+      </view>
+    </block>
+    <block a:else >
+      <button type='button' class='T2 button-style' disabled='{{btnDisabled}}' onTap='payNow'>
+        立即支付
+      </button>
+      <navigator class='color-link' url='../index/h5?url=m%2ffeedback.htm%3fuser%3d{{user}}%26type%3dBuyVip'>
+        [ 支付遇到问题 ]
+      </navigator>
+    </block>
+  </view>
+</view><view a:if='{{showPayQrcode}}'>
+  <view class='mask' onTap='hidePayQrcode'>
+  </view>
+  <view class='pay-qrcode'>
+    <view>
+      <image src='{{qrcodeUrl}}'>
+      </image>
+    </view>
+    <view style='margin-top:10px'>
+      请使用安卓版微信扫码支付
+    </view>
+  </view>
+</view>
+            </view>

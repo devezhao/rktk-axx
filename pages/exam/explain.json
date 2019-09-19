@@ -1,0 +1,7 @@
+{
+	"backgroundColor": "#fff",
+	"defaultTitle": "考题解析",
+	"usingComponents": {
+		"custom-rich-text": "/__antmove/component/custom-rich-text/custom-rich-text"
+	}
+}

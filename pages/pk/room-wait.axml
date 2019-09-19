@@ -1,0 +1,59 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <view class='page__hd act-users'>
+    <view class='user foo animated slideInLeft'>
+      <view class='headimg'>
+        <image src='{{fooHeadimg}}'>
+        </image>
+      </view>
+      <view class='nick'>
+        {{fooNick}}
+      </view>
+    </view>
+    <view class='user bar animated slideInRight'>
+      <view class='headimg'>
+        <image src="{{barHeadimg  || '/images/afo-unknow.png'}}">
+        </image>
+      </view>
+      <view class='nick'>
+        {{barNick || ''}}
+      </view>
+    </view>
+    <view class='state animated flash infinite d3s'>
+      {{stateText}}
+    </view>
+  </view>
+  <view class='page__hd op-btns animated fadeIn d2s' a:if='{{showOp == true}}'>
+    <view class='btn' onTap='cancelPk'>
+      <image src='/images/pk/ic_logout.png'>
+      </image>
+      <view>
+        放弃
+      </view>
+    </view>
+    <view class='btn'>
+      <image src='/images/share-weixin.png'>
+      </image>
+      <view>
+        邀请
+      </view>
+      <button open-type='share' class='btn-mask'>
+      </button>
+    </view>
+    <view hidden='{{showConfirm == false}}' class='confirm animated zoomIn'>
+      <form report-submit='true' onSubmit='confirmPk'>
+        <button type='button' formType='submit' class=' button-style'>
+          开始对战
+        </button>
+      </form>
+    </view>
+  </view>
+</view><view class='room-no' a:if='{{roomNo}}'>
+  <view class='no' onTap='copyRoomNo'>
+    {{roomNo}}
+  </view>
+  <view class='tips'>
+    邀好友输入以上房间号开始对战
+  </view>
+</view>
+            </view>

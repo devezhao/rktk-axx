@@ -1,0 +1,12 @@
+.weui-cell {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.weui-vcode-btn {
+    width: 100px;
+}
+
+.highbar {
+    box-shadow: 0 0 0 #fff;
+}

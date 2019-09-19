@@ -1,0 +1,4 @@
+.icon-box__title {
+    width: 88%;
+    margin: 14px auto;
+}

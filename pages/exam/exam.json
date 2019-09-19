@@ -1,0 +1,7 @@
+{
+	"backgroundColor": "#fff",
+	"defaultTitle": "答题中 [00:00]",
+	"usingComponents": {
+		"custom-rich-text": "/__antmove/component/custom-rich-text/custom-rich-text"
+	}
+}

@@ -1,0 +1,258 @@
+@import "./room-wait.acss";
+/* .page {
+  background: #2b6ba5 url(https://cdn.chinaruankao.com/a/wxx/pk/bg3-o40.png) no-repeat center bottom;
+  background-size: 400px 245px;
+} */
+
+.act-users {
+    text-align: center;
+}
+
+.act-users .user.r-scope {
+    top: 70px;
+}
+
+.act-users .user.r-scope .headimg {
+    width: 100px;
+    overflow: hidden;
+    height: 58px;
+    line-height: 1.55;
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.act-users .user.r-scope.bar .headimg {
+    text-align: right;
+}
+
+.act-users .user.r-scope .headimg text {
+    font-size: 38px;
+}
+
+.countdown {
+    border-radius: 50%;
+    border: 4px solid #fff;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    margin: 0 auto;
+    margin-top: 9px;
+    display: inline-block;
+    font-size: 28px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.question {
+    padding: 6px 30px;
+    font-size: 17px;
+    text-align: center;
+    height: 90px;
+    overflow: hidden;
+}
+
+.answers {
+    position: relative;
+}
+
+.answers .scope {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 42px;
+}
+
+.answers .scope .progress {
+    width: 8px;
+    height: 242px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 99px;
+    display: inline-block;
+    position: relative;
+}
+
+.answers .scope .progress view {
+    width: 8px;
+    height: 0;
+    background-color: #4bbefd;
+    border-radius: 3.5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: height 0.666s;
+}
+
+.answers .scope.bar .progress view {
+    background-color: #ed7baf;
+}
+
+.answers .scope .num {
+    font-size: 21px;
+    margin-bottom: 1px;
+}
+
+.answers .scope.foo {
+    left: 20px;
+}
+
+.answers .scope.bar {
+    right: 20px;
+}
+
+.answers .items {
+    margin: 0 78px;
+    padding-top: 32px;
+}
+
+.answers .items view.a {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 99px;
+    text-align: center;
+    margin-top: 12px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+
+.answers .items view.a.select {
+    color: #fff;
+}
+
+.answers .items view.a.Y {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.answers .items view.a.select.N {
+    background: #d9534f
+        url(https://cdn.chinaruankao.com/a/wxx/pk/ic_wrong_o8.png) no-repeat
+        left 12px;
+    background-size: 36px 24px;
+}
+
+.answers .items view.a.select.Y {
+    background: #5cb85c
+        url(https://cdn.chinaruankao.com/a/wxx/pk/ic_right_o8.png) no-repeat
+        left 12px;
+    background-size: 36px 24px;
+    color: #fff;
+}
+
+.answers .items view.a view {
+    padding: 12px 0;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.answers .items view.a view.bar-select {
+    background: url(https://cdn.chinaruankao.com/a/wxx/pk/ic_right_o8.png)
+        no-repeat right 12px;
+    background-size: 36px 24px;
+}
+
+.answers .items view.a view.bar-select.N {
+    background-image: url(https://cdn.chinaruankao.com/a/wxx/pk/ic_wrong_o8.png);
+}
+
+.q-source {
+    text-align: center;
+    margin-top: 22px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+}
+
+.win-img {
+    text-align: center;
+    z-index: 99;
+    position: relative;
+}
+
+.win-img .user {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #fff;
+    border-radius: 99px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.win-img .banner {
+    width: 200px;
+    height: 82px;
+    margin-top: -36px;
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mask.win {
+    background: url(https://cdn.chinaruankao.com/a/wxx/pk/result_framebg.png)
+        no-repeat center -136px;
+    background-size: 600px 600px;
+}
+
+.op-btns {
+    z-index: 99;
+    position: relative;
+    margin-top: 48px;
+}
+
+.op-btns button[type="default"] {
+    background-color: #fff !important;
+}
+
+.op-btns button + button {
+    margin-top: 12px;
+}
+
+.op-btns button.exp {
+    background-color: transparent !important;
+    color: #fff;
+    font-size: 15px;
+    padding: 0px;
+    margin-top: 6px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.op-btns button.exp image {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 10.5px;
+}
+
+/* 小尺寸屏幕 */
+
+.page.mini-screen .answers {
+    min-height: 200px;
+}
+
+.page.mini-screen .answers .scope .progress {
+    height: 202px;
+}
+
+.page.mini-screen .answers .items view.a view {
+    padding: 7.5px 0;
+    font-size: 15px;
+}
+
+.page.mini-screen .answers .items view.a.select.N,
+.page.mini-screen .answers .items view.a.select.Y {
+    background-position-y: 8.3px;
+    background-size: 30px 20px;
+}
+
+.page.mini-screen .q-source {
+    margin-top: 18px;
+}
+
+.page.mini-screen .question {
+    font-size: 16px;
+    line-height: 1.4;
+}

@@ -1,0 +1,58 @@
+<view class='page-container-classname'>
+                <view class='page' ref='saveChildRef0'>
+  <view class='page__bd'>
+    <view class='weui-cells__title'>
+      选择充值数量
+    </view>
+    <view class='weui-flex num-warp'>
+      <view class='weui-flex__item'>
+        <view class="c {{numHold == 100 ? 'active' : ''}}" data-num='{{100}}' onTap='selectNum'>
+          100
+        </view>
+      </view>
+      <view class='weui-flex__item'>
+        <view class="c {{numHold == 300 ? 'active' : ''}}" data-num='{{300}}' onTap='selectNum'>
+          300
+        </view>
+      </view>
+      <view class='weui-flex__item'>
+        <view class="c {{numHold == 500 ? 'active' : ''}}" data-num='{{500}}' onTap='selectNum'>
+          500
+        </view>
+      </view>
+      <view class='weui-flex__item'>
+        <view class="c {{numHold == 1000 ? 'active' : ''}}" data-num='{{1000}}' onTap='selectNum'>
+          1000
+        </view>
+      </view>
+    </view>
+    <view class='weui-flex num-warp'>
+      <view class='weui-flex__item'>
+        <view class="c {{numHold == 2000 ? 'active' : ''}}" data-num='{{2000}}' onTap='selectNum'>
+          2000
+        </view>
+      </view>
+      <view class='weui-flex__item'>
+        <view class="c input {{numHold == 999999 ? 'active' : ''}}" data-num='{{999999}}' onTap='selectNum'>
+          <input type='number' maxlength='{{4}}' placeholder='其它' style='text-align:center' onInput='inputNum'>
+          </input>
+        </view>
+      </view>
+      <view class='weui-flex__item'>
+      </view>
+      <view class='weui-flex__item'>
+      </view>
+    </view>
+  </view>
+  <view class='page__bd' style='margin-top:15px;text-align:center'>
+    <form report-submit='true' onSubmit='buyNow'>
+      <button type='button' formType='submit' class='T2 button-style'>
+        支付{{fee}}元
+      </button>
+    </form>
+    <navigator class='color-link' style='margin-top:12px;font-size:15px;display:inline-block' url='../index/h5?url=m%2ffeedback.htm%3fuser%3d{{user}}%26type%3dBuyCoin'>
+      [ 支付遇到问题 ]
+    </navigator>
+  </view>
+</view>
+            </view>

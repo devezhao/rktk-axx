@@ -1,0 +1,8 @@
+{
+	"backgroundColor": "#2B6BA5",
+	"titleBarColor": "#2B6BA5",
+	"defaultTitle": "对战中",
+	"usingComponents": {
+		"custom-rich-text": "/__antmove/component/custom-rich-text/custom-rich-text"
+	}
+}
