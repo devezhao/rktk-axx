@@ -1,100 +1,100 @@
 <view class='page-container-classname'>
-                <view class='page' ref='saveChildRef0'>
-  <view class='page__hd subtitle'>
-    <view class='pull-left'>
+  <view class='page' ref='saveChildRef0'>
+    <view class='page__hd subtitle'>
+      <view class='pull-left'>
       {{subject}}
+      </view>
+      <view class='pull-right seq-no'>
+        <text>
+        {{seqCurrent}}
+        </text>/{{seqTotal}}
+      </view>
+      <view class='clearfix'>
+      </view>
     </view>
-    <view class='pull-right seq-no'>
-      <text>
-        {{seqCurrent}}/{{seqTotal}}
-      </text>
-    </view>
-    <view class='clearfix'>
-    </view>
-  </view>
-  <view class='page__bd question-area' style='min-height:{{qareaHeight}}px;' animation='{{turningData}}' onLongpress='turningStart' onTouchMove='turningMove' onTouchEnd='turningEnd'>
-    <view class='question'>
-      <custom-rich-text nodes='{{question}}'>
-      </custom-rich-text>
-    </view>
-    <view class='answer-list'>
-      <block a:for='{{answerList}}' a:key='*this' ref-numbers='{{answerList}}'>
-        <view class='split-line' a:if='{{index > 0 && index % 4 == 0}}'>
-        </view>
-        <view class='item {{item.clazz}}' data-key='{{item.key}}' onTap='answer'>
-          <view class='key'>
+    <view class='page__bd question-area' style='min-height:{{qareaHeight}}px;' animation='{{turningData}}' onLongpress='turningStart' onTouchMove='turningMove' onTouchEnd='turningEnd'>
+      <view class='question'>
+        <custom-rich-text nodes='{{question}}'>
+        </custom-rich-text>
+      </view>
+      <view class='answer-list'>
+        <block a:for='{{answerList}}' a:key='*this' ref-numbers='{{answerList}}'>
+          <view class='split-line' a:if='{{index > 0 && index % 4 == 0}}'>
+          </view>
+          <view class='item {{item.clazz}}' data-key='{{item.key}}' onTap='answer'>
+            <view class='key'>
             {{item.keyText}}
+            </view>
+            <view class='text'>
+              <custom-rich-text nodes='{{item.content}}'>
+              </custom-rich-text>
+            </view>
+            <view class='clearfix'>
+            </view>
           </view>
-          <view class='text'>
-            <custom-rich-text nodes='{{item.content}}'>
-            </custom-rich-text>
-          </view>
-          <view class='clearfix'>
-          </view>
+        </block>
+      </view>
+    </view>
+    <view class='fix-foobar'>
+      <view class='weui-flex'>
+        <view class='weui-flex__item'>
+          <form report-submit='true' hidden='{{isFirst}}' onSubmit='prevQuestion'>
+            <button class='zbtn' formType='submit'>
+              <image src='/images/arrow-left.png'>
+              </image>
+            </button>
+          </form>
         </view>
-      </block>
-    </view>
-  </view>
-  <view class='fix-foobar'>
-    <view class='weui-flex'>
-      <view class='weui-flex__item'>
-        <form report-submit='true' hidden='{{isFirst}}' onSubmit='prevQuestion'>
-          <button class='zbtn' formType='submit'>
-            <image src='/images/arrow-left.png'>
-            </image>
-          </button>
-        </form>
-      </view>
-      <view class='weui-flex__item'>
-        <form report-submit='true' onSubmit='fav'>
-          <button class='zbtn' formType='submit'>
-            <image src="/images/star{{isFav ? '-filled' : ''}}.png" class='fav'>
-            </image>
-          </button>
-        </form>
-      </view>
-      <view class='weui-flex__item'>
-        <form report-submit='true' onSubmit='showDtcard'>
-          <button class='zbtn' formType='submit'>
-            <image src='/images/exam-card.png' style='margin-top:8px;width:26px;height:26px;'>
-            </image>
-          </button>
-        </form>
-      </view>
-      <view class='weui-flex__item'>
-        <form report-submit='true' hidden='{{isLast}}' onSubmit='nextQuestion'>
-          <button class='zbtn' formType='submit'>
-            <image src='/images/arrow-right.png'>
-            </image>
-          </button>
-        </form>
-        <form report-submit='true' hidden='{{!isLast}}' onSubmit='finish'>
-          <button class='zbtn done' formType='submit'>
-            <text>
+        <view class='weui-flex__item'>
+          <form report-submit='true' onSubmit='fav'>
+            <button class='zbtn' formType='submit'>
+              <image src="/images/star{{isFav ? '-filled' : ''}}.png" class='fav'>
+              </image>
+            </button>
+          </form>
+        </view>
+        <view class='weui-flex__item'>
+          <form report-submit='true' onSubmit='showDtcard'>
+            <button class='zbtn' formType='submit'>
+              <image src='/images/exam-card.png' style='margin-top:8px;width:26px;height:26px;'>
+              </image>
+            </button>
+          </form>
+        </view>
+        <view class='weui-flex__item'>
+          <form report-submit='true' a:if="{{!isLast}}" onSubmit='nextQuestion'>
+            <button class='zbtn' formType='submit'>
+              <image src='/images/arrow-right.png'>
+              </image>
+            </button>
+          </form>
+          <form report-submit='true' a:if="{{isLast}}" onSubmit='finish'>
+            <button class='zbtn done' formType='submit'>
+              <text>
               交卷
-            </text>
+              </text>
+            </button>
+          </form>
+        </view>
+      </view>
+    </view>
+    <view class='dt-card' animation='{{dtcardAnimation}}'>
+      <view class='seqs' style='height:{{seqsHeight}}px'>
+        <view a:for='{{questionTakes}}' a:key='*this' class='{{item.clazz}}' data-seq='{{item.seq}}' ref-numbers='{{questionTakes}}' onTap='gotoQuestion'>
+        {{item.seq}}
+        </view>
+      </view>
+      <view class='fix-foobar' style='background-color:rgba(255,255,255,1);'>
+        <view>
+          <icon type='cancel' size='{{42}}' color='#aaa' class=' iconcancel-style 42-style' onTap='closeDtcard'>
+          </icon>
+        </view>
+        <form report-submit='true' onSubmit='finish'>
+          <button class='weui-btn primary-style' type='primary' formType='submit' style='margin-top:9px'>
+          交卷并查看结果
           </button>
         </form>
       </view>
-    </view>
-  </view>
-  <view class='dt-card' animation='{{dtcardAnimation}}'>
-    <view class='seqs' style='height:{{seqsHeight}}px'>
-      <view a:for='{{questionTakes}}' a:key='*this' class='{{item.clazz}}' data-seq='{{item.seq}}' ref-numbers='{{questionTakes}}' onTap='gotoQuestion'>
-        {{item.seq}}
-      </view>
-    </view>
-    <view class='fix-foobar' style='background-color:rgba(255,255,255,1);'>
-      <view>
-        <icon type='cancel' size='{{42}}' color='#aaa' class=' iconcancel-style 42-style' onTap='closeDtcard'>
-        </icon>
-      </view>
-      <form report-submit='true' onSubmit='finish'>
-        <button class='weui-btn primary-style' type='primary' formType='submit' style='margin-top:9px'>
-          交卷并查看结果
-        </button>
-      </form>
     </view>
   </view>
 </view>
-            </view>

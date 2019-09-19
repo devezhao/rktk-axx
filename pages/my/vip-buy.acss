@@ -48,7 +48,7 @@
 }
 
 .fix-foobar.btns .pull-right button {
-    background-color: #a18d62;
+    background-color: #a18d62 !important;
     color: #fff;
     width: 140px;
     border: 0 none;

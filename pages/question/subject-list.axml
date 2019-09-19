@@ -64,7 +64,7 @@
       </view>
       <view class='weui-panel weui-panel_access'>
         <view class='weui-panel__bd'>
-          <navigator a:for='{{sublist1}}' a:key='*this' url='subject?id={{item[0]}}' class='weui-media-box weui-media-box_appmsg rktk-record' hover-class='weui-cell_active' ref-numbers='{{sublist1}}'>
+          <navigator a:for='{{sublist1}}' a:key='*this' url='subject?id={{item[0]}}' class='weui-media-box weui-media-box_appmsg rktk-record' hover-class='weui-cell_active'>
             <view class='weui-media-box__hd weui-media-box__hd_in-appmsg'>
               <view class='weui-media-box__thumb {{item[12]}}'>
                 <text class='Y'>
@@ -119,7 +119,7 @@
       </view>
       <view class='weui-panel weui-panel_access'>
         <view class='weui-panel__bd'>
-          <navigator a:for='{{sublist2}}' a:key='*this' url='subject?id={{item[0]}}' class='weui-media-box weui-media-box_appmsg rktk-record' hover-class='weui-cell_active' ref-numbers='{{sublist2}}'>
+          <navigator a:for='{{sublist2}}' a:key='*this' url='subject?id={{item[0]}}' class='weui-media-box weui-media-box_appmsg rktk-record' hover-class='weui-cell_active'>
             <view class='weui-media-box__hd weui-media-box__hd_in-appmsg'>
               <view class='weui-media-box__thumb T4'>
                 <text class='T'>

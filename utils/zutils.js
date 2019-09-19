@@ -1,5 +1,6 @@
 const _my = require("/__antmove/api/index.js")(my);
-const baseUrl = "https://rk.chinaruankao.com/"; //const baseUrl = 'http://192.168.0.159:8180/rktk/';
+// const baseUrl = "https://rk.chinaruankao.com/"; 
+const baseUrl = 'http://192.168.0.199:8180/rktk/';
 //const baseUrl = 'http://192.168.0.234:8080/rktk/';
 // GET 方法
 
@@ -27,7 +28,8 @@ function z_get(app, url, call) {
         url: baseUrl + url,
         method: "GET",
         header: {
-            wxxuid: wxxuid
+            wxxuid: wxxuid,
+            xagent: 'alipay'
         },
         success: call || function(res) {},
         fail: function(res) {

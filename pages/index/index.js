@@ -38,7 +38,7 @@ _Page({
 
             that.__loadRecommend();
 
-            that.__checkTwxx();
+            // that.__checkTwxx();
 
             that.__checkToken();
 
@@ -50,7 +50,7 @@ _Page({
         _my.getStorage({
             key: "FOLLOW_SUBJECT",
             success: function(res) {
-                let fs = res.data.split(",");
+                let fs = (res.data || '').split(",");
                 app.GLOBAL_DATA.FOLLOW_SUBJECT = fs;
 
                 if (fs.length > 0) {
@@ -187,6 +187,7 @@ _Page({
     },
     // 解析分享（扫码进入）
     __checkTwxx: function() {
+        return
         let q = app.enterSource.query.q;
 
         if (q && decodeURIComponent(q).indexOf("/t/wxx/") > -1) {

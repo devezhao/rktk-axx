@@ -1,89 +1,96 @@
 <view class='page-container-classname'>
-                <view class='page' ref='saveChildRef0'>
-  <view class='page__hd'>
-    <view class='top-block'>
-      <view class='subtitle'>
+  <view class='page' ref='saveChildRef0'>
+    <view class='page__hd'>
+      <view class='top-block'>
+        <view class='subtitle'>
         {{parent_name}}
-      </view>
-      <view class='title'>
+        </view>
+        <view class='title'>
         {{subject_name}}
-      </view>
-      <view class='subtitle infos'>
-        考题数 {{question_num}}        <block a:if='{{subject_type == 1}}'>
-          <text>
-            /通过率 {{pass_percent}}%
-          </text>
-          <text>
-            /满分 {{question_scope}}
-          </text>
-        </block>
-        <block a:if='{{subject_type == 11}}'>
-          <text>
-            /满分 {{question_scope}}
-          </text>
-        </block>
-        <text>
-          /
-        </text>
-        <block a:if='{{vip_free == true}}'>
-          <text class='color-base2'>
-            (VIP免费)
-          </text>
-        </block>
-        <block a:elif='{{coin > 0}}'>
-          {{coin}}学豆          <block a:if='{{subject_type == 2}}'>
-            起
+        </view>
+        <view class='subtitle infos'>
+        考题数 {{question_num}}
+          <block a:if='{{subject_type == 1}}'>
+            <text>
+            /
+            </text>
+          通过率 {{pass_percent}}%
+            <text>
+            /
+            </text>
+          满分 {{question_scope}}
           </block>
-        </block>
-        <block a:else >
-          <text a:if='{{coin == 0}}' class='color-base2'>
+          <block a:if='{{subject_type == 11}}'>
+            <text>
+            /
+            </text>
+          满分 {{question_scope}}
+          </block>
+          <text>
+          /
+          </text>
+          <block a:if='{{vip_free == true}}'>
+            <text class='color-base2'>
+            (VIP免费)
+            </text>
+          </block>
+          <block a:elif='{{coin > 0}}'>
+          {{coin}}学豆
+            <block a:if='{{subject_type == 2}}'>
+            起
+            </block>
+          </block>
+          <block a:else >
+            <text a:if='{{coin == 0}}' class='color-base2'>
             免费
-          </text>
-          <text a:if='{{coin == -1}}' class='color-base2'>
+            </text>
+            <text a:if='{{coin == -1}}' class='color-base2'>
             (限免)
-          </text>
-          <text a:if='{{coin == -2}}' class='tag-vip'>
+            </text>
+            <text a:if='{{coin == -2}}' class='tag-vip'>
             VIP专享
-          </text>
-        </block>
+            </text>
+          </block>
+        </view>
       </view>
     </view>
+    <block a:if='{{is_open == true && subject_type != 3}}'>
+      <view class='fix-foobar'>
+        <view class='pull-left'>
+          <form report-submit='true' onSubmit='toExplain'>
+            <button class='weui-btn primary-style' type='primary' formType='submit'>
+            考题解析
+              <text>
+              (限免)
+              </text>
+            </button>
+          </form>
+        </view>
+        <view class='pull-left'>
+          <form report-submit='true' onSubmit='toExam'>
+            <button class='weui-btn split primary-style' type='primary' formType='submit'>
+            开始答题
+            </button>
+          </form>
+        </view>
+      </view>
+    </block>
+    <block a:else >
+      <view class='highbar warn' a:if='{{subject_name && is_open == false}}'>
+      本题库已下线
+      </view>
+    </block>
   </view>
   <block a:if='{{is_open == true && subject_type != 3}}'>
-    <view class='fix-foobar'>
-      <view class='pull-left'>
-        <form report-submit='true' onSubmit='toExplain'>
-          <button class='weui-btn primary-style' type='primary' formType='submit'>
-            考题解析            <text>
-              (限免)
-            </text>
-          </button>
-        </form>
-      </view>
-      <view class='pull-left'>
-        <form report-submit='true' onSubmit='toExam'>
-          <button class='weui-btn split primary-style' type='primary' formType='submit'>
-            开始答题
-          </button>
-        </form>
-      </view>
+    <view class='float-btns'>
+      <button class='zbtn' onTap='shareboxOpen'>
+        <image src='/images/share.png' class='share'>
+        </image>
+      </button>
     </view>
+    <import src='../comps/z-sharebox.axml'>
+    </import>
+    <template is='z-sharebox' data='{{...shareboxData}}'>
+    </template>
   </block>
-  <block a:else >
-    <view class='highbar warn' a:if='{{subject_name && is_open == false}}'>
-      本题库已下线
-    </view>
-  </block>
-</view><block a:if='{{is_open == true && subject_type != 3}}'>
-  <view class='float-btns'>
-    <button class='zbtn' onTap='shareboxOpen'>
-      <image src='/images/share.png' class='share'>
-      </image>
-    </button>
-  </view>
-  <import src='../comps/z-sharebox.axml'>
-  </import>
-  <template is='z-sharebox' data='{{...shareboxData}}'>
-  </template>
-</block>
-            </view>
+</view>

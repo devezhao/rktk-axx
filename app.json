@@ -35,8 +35,6 @@
 		"pages/my/vip-snactive"
 	],
 	"window": {
-		"navigationBarTextStyle": "white",
-		"backgroundTextStyle": "dark",
 		"backgroundColor": "#f7f7f9",
 		"titleBarColor": "#4b8ef9",
 		"defaultTitle": "软考必备",

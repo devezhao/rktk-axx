@@ -21,8 +21,8 @@
           <text a:if='{{coin == -1}}' class='color-base2'>
             (限免)
           </text>
-          <text a:if='{{coin == -2}}' class='color-base2'>
-            (VIP专享)
+          <text a:if='{{coin == -2}}' class='tag-vip'>
+            VIP专享
           </text>
         </block>
       </view>

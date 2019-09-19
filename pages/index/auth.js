@@ -5,63 +5,61 @@ const app = app || getApp();
 const zutils = require("../../utils/zutils.js");
 
 _Page({
-    data: {
-        authActive: false
-    },
-    onLoad: function(e) {
-        this.nexturl = decodeURIComponent(e.nexturl || "/pages/index/index");
+  data: {
+    authActive: false
+  },
+  onLoad: function(e) {
+    this.nexturl = decodeURIComponent(e.nexturl || "/pages/index/index");
 
-        _my.setNavigationBarTitle({
-            title: "软考必备"
+    _my.setNavigationBarTitle({
+      title: "软考必备"
+    });
+
+    let that = this;
+
+    my.getAuthCode({
+      scopes: 'auth_base',
+      success: (res) => {
+        that.__loginCode = res.authCode;
+        that.setData({
+          authActive: true
         });
+      },
+    });
+  },
 
-        let that = this;
-
-        _my.login({
-            success: function(res) {
-                that.__loginCode = res.code;
-                that.setData({
-                    authActive: true
-                });
-            }
-        });
-    },
-    storeUserInfo: function(e) {
-        let res = e.detail;
-
-        if (res.errMsg != "getUserInfo:ok") {
-            this.setData({
-                authText: "重新授权"
-            });
-            return;
-        }
-
+  storeUserInfo: function(e) {
+    my.getOpenUserInfo({
+      success: (res) => {
         this.setData({
-            authText: "请稍后",
-            authActive: false
+          authText: "请稍后",
+          authActive: false
         });
-        console.log("存储授权 - " + JSON.stringify(res));
-        let that = this;
-        let _data = {
-            code: that.__loginCode,
-            iv: res.iv,
-            data: res.encryptedData
-        };
-        zutils.post(app, "api/user/wxx-login?noloading", _data, function(res) {
-            app.GLOBAL_DATA.USER_INFO = res.data.data;
 
-            _my.setStorage({
-                key: "USER_INFO",
-                data: app.GLOBAL_DATA.USER_INFO,
-                success: function() {
-                    if (that.nexturl == "back") _my.navigateBack();
-                    else app.gotoPage(that.nexturl, true);
-                }
-            });
+        console.log(JSON.stringify(res))
+        let ui = JSON.parse(res.response).response
+        ui.__code = that.__loginCode
+
+        zutils.post(app, "api/user/wxx-login-update?noloading", JSON.stringify(ui), function(res) {
+          app.GLOBAL_DATA.USER_INFO = res.data.data;
+
+          _my.setStorage({
+            key: "USER_INFO",
+            data: app.GLOBAL_DATA.USER_INFO,
+            success: function() {
+              if (that.nexturl == "back") _my.navigateBack();
+              else app.gotoPage(that.nexturl, true);
+            }
+          });
         });
-    },
+      },
+      fail: (res) => {
+        console.log(JSON.stringify(res))
+      }
+    })
+  },
 
-    goback() {
-        _my.navigateBack();
-    }
+  goback() {
+    _my.navigateBack();
+  }
 });

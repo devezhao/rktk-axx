@@ -25,8 +25,8 @@ _App({
         RUN_MODE: 0
     },
     onLaunch: function(e) {
-        this.enterSource = e;
-        console.log("小程序初始化: " + JSON.stringify(this.enterSource));
+        this.enterSource = e || {};
+        console.log("小程序初始化: " + JSON.stringify(e));
         let that = this;
 
         _my.getStorage({
@@ -100,10 +100,16 @@ _App({
 
             that.__inLogin = true;
 
-            _my.login({
-                success: function(res) {
-                    that.__storeUserInfo(res, cb);
-                }
+            // _my.login({
+            //     success: function(res) {
+            //         that.__storeUserInfo(res, cb);
+            //     }
+            // });
+            my.getAuthCode({
+              scopes: 'auth_base',
+              success: (res) => {
+                that.__storeUserInfo(res, cb);
+              },
             });
         }
     },
@@ -112,12 +118,12 @@ _App({
         console.log("存储授权 - " + JSON.stringify(res));
         let that = this;
         let _data = {
-            code: res.code,
+            code: res.authCode,
             iv: res.iv || "",
             data: res.encryptedData || ""
         };
         _data.enterSource = that.enterSource;
-        zutils.post(that, "api/user/wxx-login", _data, function(res) {
+        zutils.post(that, "api/user/axx-login", _data, function(res) {
             that.GLOBAL_DATA.USER_INFO = res.data.data;
 
             _my.setStorage({
