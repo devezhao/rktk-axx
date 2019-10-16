@@ -591,6 +591,10 @@ button.btn-mask {
 
 /* Fixs AXX */
 
+button {
+  height: auto;
+}
+
 button.primary-style {
   background-color: #4b8ef9 !important;
   color: #fff !important;

@@ -1,58 +1,42 @@
 <view class='page-container-classname'>
-                <view class='page' ref='saveChildRef0'>
-  <view class='page__bd' style='padding-top:16px;font-size:16px;'>
+  <view class='page' ref='saveChildRef0'>
+    <view class='page__bd' style='padding-top:16px;font-size:16px;'>
     通过以下任意一种方式邀请好友使用软考必备，每邀请一位好友可获得10学豆奖励，多邀多送！
-  </view>
-  <view class='page__hd'>
-    <view class='weui-cells__title' onTap='ccopy'>
-      分享文字链接（点击可复制）
     </view>
-    <view class='weui-panel' onTap='ccopy'>
-      <view class='weui-panel__bd'>
-        <view class='weui-media-box rktk-record'>
-          <view class='weui-media-box__title'>
+    <view class='page__hd'>
+      <view class='weui-cells__title' onTap='ccopy'>
+      分享文字链接（点击可复制）
+      </view>
+      <view class='weui-panel' onTap='ccopy'>
+        <view class='weui-panel__bd'>
+          <view class='weui-media-box rktk-record'>
+            <view class='weui-media-box__title'>
             {{text}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='weui-cells__title'>
+      分享给好友或群组
+      </view>
+      <view class='weui-cells rktk'>
+        <view class='weui-cell weui-cell_access' hover-class='weui-cell_active'>
+          <view class='weui-cell__bd'>
+            <button class='weui-btn share default-style' type='default' open-type='share'>
+            点击分享
+            </button>
+          </view>
+          <view class='weui-cell__ft weui-cell__ft_in-access'>
           </view>
         </view>
       </view>
     </view>
-    <view class='weui-cells__title'>
-      分享给微信好友或群组
-    </view>
-    <view class='weui-cells rktk'>
-      <view class='weui-cell weui-cell_access' hover-class='weui-cell_active'>
-        <view class='weui-cell__bd'>
-          <button class='weui-btn share default-style' type='default' open-type='share'>
-            点击分享
-          </button>
-        </view>
-        <view class='weui-cell__ft weui-cell__ft_in-access'>
-        </view>
-      </view>
-    </view>
   </view>
-  <view class='weui-cells__title'>
-    分享小程序码
-  </view>
-  <view class='weui-cells rktk'>
-    <view class='weui-cell weui-cell_access' hover-class='weui-cell_active' onTap='csave'>
-      <view class='weui-cell__bd'>
-        <button a:if='{{openSettingNeed == true}}' class='weui-btn share default-style' type='default' open-type='openSetting' onOpenSetting='openSettingAfter'>
-          点击获取
-        </button>
-        <button a:else  class='weui-btn share default-style' type='default'>
-          点击获取
-        </button>
-      </view>
-      <view class='weui-cell__ft weui-cell__ft_in-access'>
-      </view>
-    </view>
-  </view>
-</view><view class='fix-foobar btns'>
-  <form report-submit='true' onSubmit='inviteList'>
-    <button class='weui-btn default-style' type='default' formType='submit'>
+  <view class='fix-foobar btns'>
+    <form report-submit='true' onSubmit='inviteList'>
+      <button class='weui-btn default-style' type='default' formType='submit'>
       查看奖励
-    </button>
-  </form>
+      </button>
+    </form>
+  </view>
 </view>
-            </view>

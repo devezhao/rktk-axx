@@ -1,137 +1,144 @@
 <view class='page-container-classname'>
-                <view class='page {{pageClazz}}' ref='saveChildRef0'>
-  <view class='page__hd weui-flex top-position'>
-    <view class="weui-flex__item {{viewId == 'question' ? 'active' : ''}}" data-vid='question' onTap='position'>
-      <image src='/images/icon-marker.png'>
-      </image>
+  <view class='page {{pageClazz}}' ref='saveChildRef0'>
+    <view class='page__hd weui-flex top-position'>
+      <view class="weui-flex__item {{viewId == 'question' ? 'active' : ''}}" data-vid='question' onTap='position'>
+        <image src='/images/icon-marker.png'>
+        </image>
       考题
-    </view>
-    <view class="weui-flex__item {{viewId == 'answers' ? 'active' : ''}}" data-vid='answers' onTap='position'>
-      <image src='/images/icon-marker.png'>
-      </image>
+      </view>
+      <view class="weui-flex__item {{viewId == 'answers' ? 'active' : ''}}" data-vid='answers' onTap='position'>
+        <image src='/images/icon-marker.png'>
+        </image>
       参考答案
-    </view>
-    <view class="weui-flex__item {{viewId == 'explain' ? 'active' : ''}}" data-vid='explain' onTap='position'>
-      <image src='/images/icon-marker.png'>
-      </image>
+      </view>
+      <view class="weui-flex__item {{viewId == 'explain' ? 'active' : ''}}" data-vid='explain' onTap='position'>
+        <image src='/images/icon-marker.png'>
+        </image>
       考题解析
-    </view>
-  </view>
-  <scroll-view scroll-y='true' scroll-with-animation='true' scroll-into-view='{{viewId}}' style='height:{{viewHeight}}px;margin-top:40px' animation='{{turningData}}' onLongpress='turningStart' onTouchMove='turningMove' onTouchEnd='turningEnd'>
-    <view class='page__bd' id='question' style='padding-top:1px'>
-      <view class='question'>
-        <custom-rich-text nodes='{{question}}'>
-        </custom-rich-text>
       </view>
     </view>
-    <view class='page__bd' id='answers' style='padding-top:1px'>
-      <view class='answer-list'>
-        <block a:for='{{answer_list}}' a:key='*this' ref-numbers='{{answer_list}}'>
-          <view class='split-line' a:if='{{index > 0 && index % 4 == 0}}'>
-          </view>
-          <view class='item {{item[10]}}' data-key='{{item[0]}}' onTap='interactiveAnswer'>
-            <view class='key'>
-              {{item[11]}}
-            </view>
-            <view class='text'>
-              <custom-rich-text nodes='{{item[1]}}'>
-              </custom-rich-text>
-            </view>
-            <view class='clearfix'>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-    <view class='page__hd' id='explain' hidden='{{source_subject == null}}'>
-      <view class='explain-source' data-url='/pages/question/subject?id={{source_subject_id}}' onTap='gotoPage'>
-        <icon type='info_circle' size='{{15}}' color='#777' class=' iconinfo_circle-style 15-style'>
-        </icon>
-        {{source_subject}}
-      </view>
-      <view class='explain-title'>
-        考题解析
-      </view>
-      <view class='explain-content' a:if='{{showExplain == true}}'>
-        <block a:if="{{explain_freedom == 'LIMIT'}}">
-          <view class='explain-limit'>
-            <custom-rich-text nodes='{{explain}}'>
-            </custom-rich-text>
-            <view hidden='{{hideGradual}}' class='gradual'>
-            </view>
-          </view>
-          <view hidden='{{hideGradual}}' class='explain-more'>
-            <button onTap='gotoVipBuy'>
-              查看完整解析
-            </button>
-          </view>
-        </block>
-        <block a:else >
-          <custom-rich-text nodes='{{explain}}'>
+    <scroll-view scroll-y='true' scroll-with-animation='true' scroll-into-view='{{viewId}}' style='height:{{viewHeight}}px;margin-top:40px' animation='{{turningData}}' onLongpress='turningStart' onTouchMove='turningMove' onTouchEnd='turningEnd'>
+      <view class='page__bd' id='question' style='padding-top:1px'>
+        <view class='question'>
+          <custom-rich-text nodes='{{question}}'>
           </custom-rich-text>
-        </block>
-      </view>
-      <view class='explain-content interactive' a:else >
-        <view>
-          已开启练习模式，解析及参考答案将在答题后显示。
         </view>
       </view>
-    </view>
-  </scroll-view>
-</view><view class='float-btns'>
-  <view class="zbtn {{interactiveMode == true ? 'active' : ''}}" hidden='{{hideInteractiveMode}}' onTap='toggleInteractive'>
-    <text class='L2'>
+      <view class='page__bd' id='answers' style='padding-top:1px'>
+        <view class='answer-list'>
+          <block a:for='{{answer_list}}' a:key='*this' ref-numbers='{{answer_list}}'>
+            <view class='split-line' a:if='{{index > 0 && index % 4 == 0}}'>
+            </view>
+            <view class='item {{item[10]}}' data-key='{{item[0]}}' onTap='interactiveAnswer'>
+              <view class='key'>
+              {{item[11]}}
+              </view>
+              <view class='text'>
+                <custom-rich-text nodes='{{item[1]}}'>
+                </custom-rich-text>
+              </view>
+              <view class='clearfix'>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class='page__hd' id='explain' hidden='{{source_subject == null}}'>
+        <view class='explain-source' data-url='/pages/question/subject?id={{source_subject_id}}' onTap='gotoPage'>
+          <icon type='info_circle' size='{{15}}' color='#777' class=' iconinfo_circle-style 15-style'>
+          </icon>
+        {{source_subject}}
+        </view>
+        <view class='explain-title'>
+        考题解析
+        </view>
+        <view class='explain-content' a:if='{{showExplain == true}}'>
+          <block a:if="{{explain_freedom == 'LIMIT'}}">
+            <view class='explain-limit'>
+              <custom-rich-text nodes='{{explain}}'>
+              </custom-rich-text>
+              <view hidden='{{hideGradual}}' class='gradual'>
+              </view>
+            </view>
+            <view hidden='{{hideGradual}}' class='explain-more'>
+              <button onTap='gotoVipBuy'>
+              查看完整解析
+              </button>
+            </view>
+          </block>
+          <block a:else >
+            <custom-rich-text nodes='{{explain}}'>
+            </custom-rich-text>
+          </block>
+        </view>
+        <view class='explain-content interactive' a:else >
+          <view>
+          已开启练习模式，解析及参考答案将在答题后显示。
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='float-btns'>
+    <view class="zbtn {{interactiveMode == true ? 'active' : ''}}" hidden='{{hideInteractiveMode}}' onTap='toggleInteractive'>
+      <text class='L2'>
       练习\n模式
-    </text>
-    <view class='N hide'>
+      </text>
+      <view class='N hide'>
       新
+      </view>
+    </view>
+    <view class='zbtn' data-url='/pages/index/h5?url=m%2ffeedback.htm%3fuser%3d{{user}}%26type%3dCorrect-{{currentQuestionId}}' onTap='gotoPage'>
+      <text class='L2'>
+      考题\n纠错
+      </text>
+    </view>
+    <form report-submit='true' onSubmit='fav'>
+      <button class='zbtn' formType='submit'>
+        <image src="/images/star{{isFav ? '-filled' : ''}}.png" class='fav'>
+        </image>
+      </button>
+    </form>
+    <form report-submit='true' onSubmit='shareboxOpen'>
+      <button class='zbtn' formType='submit'>
+        <image src='/images/share.png' class='share'>
+        </image>
+      </button>
+    </form>
+  </view>
+  <view class='fix-foobar answerkeys' hidden='{{yourAnswer == null}}'>
+    <view class='pull-left'>
+    参考答案
+      <text>
+      {{rightAnswer}}
+      </text>
+    </view>
+    <view class='pull-left'>
+    你的答案
+      <text>
+      {{yourAnswer}}
+      </text>
+    </view>
+    <view class='clearfix'>
     </view>
   </view>
-  <view class='zbtn' data-url='/pages/index/h5?url=m%2ffeedback.htm%3fuser%3d{{user}}%26type%3dCorrect-{{currentQuestionId}}' onTap='gotoPage'>
-    <text class='L2'>
-      考题\n纠错
-    </text>
-  </view>
-  <form report-submit='true' onSubmit='fav'>
-    <button class='zbtn' formType='submit'>
-      <image src="/images/star{{isFav ? '-filled' : ''}}.png" class='fav'>
+  <import src='../comps/z-sharebox.axml'>
+  </import>
+  <template is='z-sharebox' data='{{...shareboxData}}'>
+  </template>
+  <view class='page-nos' hidden='{{hideNos}}'>
+    <view class='el page-prev' hover-class='go-hover' onTap='goPrev'>
+      <image src='/images/arrow-left-fff.png'>
       </image>
-    </button>
-  </form>
-  <form report-submit='true' onSubmit='shareboxOpen'>
-    <button class='zbtn' formType='submit'>
-      <image src='/images/share.png' class='share'>
-      </image>
-    </button>
-  </form>
-</view><view class='fix-foobar answerkeys' hidden='{{yourAnswer == null}}'>
-  <view class='pull-left'>
-    参考答案    <text>
-      {{rightAnswer}}
-    </text>
-  </view>
-  <view class='pull-left'>
-    你的答案    <text>
-      {{yourAnswer}}
-    </text>
-  </view>
-  <view class='clearfix'>
-  </view>
-</view><import src='../comps/z-sharebox.axml'>
-</import><template is='z-sharebox' data='{{...shareboxData}}'>
-</template><view class='page-nos' hidden='{{hideNos}}'>
-  <view class='el page-prev' hover-class='go-hover' onTap='goPrev'>
-    <image src='/images/arrow-left-fff.png'>
-    </image>
-  </view>
-  <view class='el page-no'>
+    </view>
+    <view class='el page-no'>
     {{qidsNo}}/{{qidsTotal}}
-  </view>
-  <view class='el page-next' hover-class='go-hover' onTap='goNext'>
-    <image src='/images/arrow-right-fff.png'>
-    </image>
-  </view>
-  <view class='clearfix'>
+    </view>
+    <view class='el page-next' hover-class='go-hover' onTap='goNext'>
+      <image src='/images/arrow-right-fff.png'>
+      </image>
+    </view>
+    <view class='clearfix'>
+    </view>
   </view>
 </view>
-            </view>

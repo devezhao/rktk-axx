@@ -23,6 +23,8 @@ Component({
                         this.setData({
                             nodesData: nodes,
                         });
+                    } else {
+                      console.error(err)
                     }
                 });
             }

@@ -1,309 +1,303 @@
 @import "../../libs/animate.acss";
 .home-swiper {
-    height: 150px;
-    width: 100%;
+  height: 150px;
+  width: 100%;
 }
 
-.home-swiper view,
-.home-swiper image {
-    height: 100%;
-    width: 100%;
+.home-swiper view, .home-swiper image {
+  height: 100%;
+  width: 100%;
 }
 
 .page__hd.ttop {
-    border-bottom: 1rpx solid #d9d9d9;
-    background-color: #fff;
-    padding: 7px 0;
+  border-bottom: 1rpx solid #d9d9d9;
+  background-color: #fff;
+  padding: 7px 0;
 }
 
 .top-column {
-    padding: 2px 0;
+  padding: 2px 0;
 }
 
-.top-column .weui-flex__item view,
-.top-column .weui-flex__item navigator {
-    text-align: center;
-    line-height: 1;
+.top-column .weui-flex__item view, .top-column .weui-flex__item navigator {
+  text-align: center;
+  line-height: 1;
 }
 
 .top-column .weui-flex__item .icon-w {
-    padding: 6px 0;
-    border-radius: 0;
-    line-height: 1;
-    background-color: #fff;
-    position: relative;
+  padding: 6px 0;
+  border-radius: 0;
+  line-height: 1;
+  background-color: #fff;
+  position: relative;
 }
 
 .top-column .weui-flex__item .icon-w:active {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .top-column .weui-flex__item .icon-w .icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #aaa;
-    display: inline-block;
-    overflow: hidden;
-    opacity: 0.8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #aaa;
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0.8;
 }
 
 .top-column .weui-flex__item .icon-w .icon image {
-    width: 28px;
-    height: 28px;
-    display: inline-block;
-    margin-top: 6px;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  margin-top: 6px;
 }
 
 .top-column .weui-flex__item .icon-w text {
-    display: block;
-    color: #444;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 6px;
+  display: block;
+  color: #444;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 6px;
 }
 
 .top-column .weui-flex__item .icon-w .icon.fav image {
-    width: 30px;
-    height: 30px;
-    margin-top: 5px;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
 }
 
 .top-column .weui-flex__item .icon-w .icon.inc image {
-    width: 26px;
-    height: 26px;
-    margin-top: 8px;
+  width: 26px;
+  height: 26px;
+  margin-top: 8px;
 }
 
 .top-column .weui-flex__item .icon-w .icon.rem image {
-    width: 27px;
-    height: 27px;
-    margin-top: 6px;
+  width: 27px;
+  height: 27px;
+  margin-top: 6px;
 }
 
 .top-column .weui-flex__item .icon-w text.bag {
-    position: absolute;
-    top: -2px;
-    right: 18px;
-    color: #fff;
-    background-color: #f00;
-    font-size: 10px;
-    min-width: 12px;
-    padding: 0 2px;
-    height: 16px;
-    line-height: 16px;
-    border-radius: 99px;
-    text-align: center;
-    overflow: hidden;
-    border: 1px solid #fff;
+  position: absolute;
+  top: -2px;
+  right: 18px;
+  color: #fff;
+  background-color: #f00;
+  font-size: 10px;
+  min-width: 12px;
+  padding: 0 2px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 99px;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #fff;
 }
 
 .weui-media-box__title.nodata-tips {
-    margin: 14px 0;
-    text-align: center;
+  margin: 14px 0;
+  text-align: center;
 }
 
-.weui-media-box__title.nodata-tips navigator,
-.weui-media-box__title.nodata-tips .link {
-    color: #586c94;
-    font-size: 16px;
+.weui-media-box__title.nodata-tips navigator, .weui-media-box__title.nodata-tips .link {
+  color: #586c94;
+  font-size: 16px;
 }
 
 .book {
-    background-color: #fcea88;
-    border-radius: 4px;
-    color: #be3b22;
-    overflow: hidden;
-    margin: 3px 7px;
-    text-align: center;
-    padding-top: 24px;
+  background-color: #fcea88;
+  border-radius: 4px;
+  color: #be3b22;
+  overflow: hidden;
+  margin: 3px 7px;
+  text-align: center;
+  padding-top: 24px;
 }
 
 .book text {
-    display: block;
-    font-size: 16px;
-    line-height: 1.4;
+  display: block;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .book text.YM {
-    background-color: rgba(190, 59, 34, 0.7);
-    color: #fff;
-    width: 75%;
-    margin: 0 auto;
-    border-radius: 99px;
-    line-height: 1.5;
-    font-size: 12px;
-    margin-top: 16px;
-    margin-bottom: 14px;
+  background-color: rgba(190, 59, 34, 0.7);
+  color: #fff;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 99px;
+  line-height: 1.5;
+  font-size: 12px;
+  margin-top: 16px;
+  margin-bottom: 14px;
 }
 
 .book.T2 {
-    background-color: #afefb7;
-    color: #345f4b;
+  background-color: #afefb7;
+  color: #345f4b;
 }
 
 .book.T2 text.YM {
-    background-color: rgba(52, 95, 75, 0.7);
+  background-color: rgba(52, 95, 75, 0.7);
 }
 
 .book.T3 {
-    background-color: #ffd09c;
-    color: #aa0101;
+  background-color: #ffd09c;
+  color: #aa0101;
 }
 
 .book.T3 text.YM {
-    background-color: rgba(170, 1, 1, 0.7);
+  background-color: rgba(170, 1, 1, 0.7);
 }
 
 .book.T4 {
-    background-color: #a8ebfa;
-    color: #1b4235;
-    background: #a8ebfa
-        url(https://cdn.chinaruankao.com/a/wxx/icon-target-o50.png) no-repeat
-        center 73px;
-    background-size: 40px 40px;
+  background-color: #a8ebfa;
+  color: #1b4235;
+  background: #a8ebfa url(https://cdn.chinaruankao.com/a/wxx/icon-target-o50.png) no-repeat center 73px;
+  background-size: 40px 40px;
 }
 
 .book.T4 text.YM {
-    background-color: rgba(27, 66, 53, 0.7);
+  background-color: rgba(27, 66, 53, 0.7);
 }
 
 .book.T4 text.TXT {
-    height: 44px;
-    vertical-align: middle;
-    padding: 0 8px;
-    overflow: hidden;
+  height: 44px;
+  vertical-align: middle;
+  padding: 0 8px;
+  overflow: hidden;
 }
 
 .follow-subjects {
-    height: 120px;
-    white-space: nowrap;
-    overflow: hidden;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  height: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .follow-subjects navigator {
-    width: 31%;
-    display: inline-block;
+  width: 31%;
+  display: inline-block;
 }
 
 .follow-subjects navigator .book {
-    margin: 0;
-    margin-right: 14px;
-    white-space: normal;
+  margin: 0;
+  margin-right: 14px;
+  white-space: normal;
 }
 
 .follow-subjects navigator:last-child {
-    margin-right: 14px;
+  margin-right: 14px;
 }
 
 .weui-panel {
-    margin-top: 14px;
+  margin-top: 14px;
 }
 
 .coupon-warp {
-    width: 260px;
-    position: fixed;
-    left: 50%;
-    margin-left: -150px;
-    background-color: #f43a47;
-    border-radius: 6px;
-    top: 20%;
-    padding: 20px;
-    z-index: 99;
+  width: 260px;
+  position: fixed;
+  left: 50%;
+  margin-left: -150px;
+  background-color: #f43a47;
+  border-radius: 6px;
+  top: 20%;
+  padding: 20px;
+  z-index: 99;
 }
 
 .coupon-warp .close {
-    float: right;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 24px;
-    margin-top: -19px;
-    margin-right: -9px;
+  float: right;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  margin-top: -19px;
+  margin-right: -9px;
 }
 
 .coupon-warp .title {
-    text-align: center;
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .coupon-warp .coupon {
-    width: 100%;
-    background-color: #fff;
-    margin-bottom: 12px;
-    border-radius: 2px;
-    overflow: hidden;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 12px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.07);
 }
 
 .coupon-warp .coupon .money {
-    background-color: #ec961d;
-    width: 76px;
-    height: 70px;
-    color: #fff;
-    font-size: 25px;
-    text-align: center;
-    line-height: 68px;
-    border-right: 2px dotted #fff;
+  background-color: #ec961d;
+  width: 76px;
+  height: 70px;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  line-height: 68px;
+  border-right: 2px dotted #fff;
 }
 
 .coupon-warp .coupon .ctext {
-    padding-left: 14px;
-    padding-top: 10px;
-    font-size: 15px;
-    line-height: 1.3;
+  padding-left: 14px;
+  padding-top: 10px;
+  font-size: 15px;
+  line-height: 1.3;
 }
 
 .coupon-warp .coupon .ctext view {
-    font-size: 12px;
-    color: #999;
-    margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
 }
 
 .coupon-warp .btns {
-    margin-top: 17px;
+  margin-top: 17px;
 }
 
 .coupon-warp .btns button {
-    border: 2px solid #ec961d;
-    font-size: 17px;
-    background-color: transparent;
-    color: #fff;
-    line-height: 2.4;
+  border: 2px solid #ec961d;
+  font-size: 17px;
+  background-color: transparent;
+  color: #fff;
+  line-height: 2.4;
 }
 
 .coupon-warp .btns button.text {
-    border: 0 none;
-    line-height: 1.4;
-    font-size: 15px;
-    margin-top: 12px;
-    color: #ec961d;
+  border: 0 none;
+  line-height: 1.4;
+  font-size: 15px;
+  margin-top: 12px;
+  color: #ec961d;
 }
 
 .tooltip.fav {
-    left: auto;
-    right: 7px;
+  left: auto;
+  right: 7px;
 }
 
 .tooltip.fav .arrow.up {
-    left: auto;
-    right: 58.5px;
+  left: auto;
+  right: 58.5px;
 }
 
 .tooltip.fav .content {
-    padding: 9px 14px;
+  padding: 9px 14px;
 }
 
 @media screen and (min-width: 376px) {
-    .tooltip.fav {
-        right: 9px;
-    }
-
-    .tooltip.fav .arrow.up {
-        right: 67px;
-    }
+  .tooltip.fav {
+    right: 9px;
+  }
+  .tooltip.fav .arrow.up {
+    right: 67px;
+  }
 }
 
 /* HomeIcon https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=16947 */

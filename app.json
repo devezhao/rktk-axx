@@ -58,12 +58,6 @@
 				"activeIcon": "images/icon-subject-s.png"
 			},
 			{
-				"pagePath": "pages/pk/start",
-				"name": "PK榜",
-				"icon": "images/pk/icon-pk2.png",
-				"activeIcon": "images/pk/icon-pk2-s.png"
-			},
-			{
 				"pagePath": "pages/my/home",
 				"name": "我",
 				"icon": "images/icon-user.png",

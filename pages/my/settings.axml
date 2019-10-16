@@ -1,85 +1,42 @@
 <view class='page-container-classname'>
-                <view class='page' ref='saveChildRef0'>
-  <view class='page__hd'>
-    <view class='weui-cells__title'>
+  <view class='page' ref='saveChildRef0'>
+    <view class='page__hd'>
+      <view class='weui-cells__title'>
       答题偏好
-    </view>
-    <view class='weui-cells weui-cells_after-title'>
-      <view class='weui-cell weui-cell_switch'>
-        <view class='weui-cell__bd'>
+      </view>
+      <view class='weui-cells weui-cells_after-title'>
+        <view class='weui-cell weui-cell_switch'>
+          <view class='weui-cell__bd'>
           自动跳转下一题
-        </view>
-        <view class='weui-cell__ft'>
-          <switch color='#4b8ef9' data-id='examAutoNext' checked='{{examAutoNext}}' onChange='setting'>
-          </switch>
-        </view>
-      </view>
-    </view>
-  </view>
-  <view class='page__hd'>
-    <view class='weui-cells__title'>
-      通知
-    </view>
-    <view class='weui-cells weui-cells_after-title'>
-      <view class='weui-cell weui-cell_switch'>
-        <view class='weui-cell__bd'>
-          题库更新
-        </view>
-        <view class='weui-cell__ft'>
-          <switch color='#4b8ef9' data-id='tipsSubjectUpdate' checked='{{tipsSubjectUpdate}}' onChange='setting'>
-          </switch>
-        </view>
-      </view>
-      <view class='weui-cell weui-cell_switch'>
-        <view class='weui-cell__bd'>
-          答题提醒
-        </view>
-        <view class='weui-cell__ft'>
-          <switch color='#4b8ef9' data-id='tipsStudy' checked='{{tipsStudy}}' onChange='setting'>
-          </switch>
+          </view>
+          <view class='weui-cell__ft'>
+            <switch color='#4b8ef9' data-id='examAutoNext' checked='{{examAutoNext}}' onChange='setting'>
+            </switch>
+          </view>
         </view>
       </view>
     </view>
-  </view>
-  <view class='page__hd'>
-    <view class='weui-cells__title'>
+    <view class='page__hd'>
+      <view class='weui-cells__title'>
       数据
-    </view>
-    <view class='weui-cells weui-cells_after-title'>
-      <view class='weui-cell weui-cell_access' hover-class='weui-cell_active' onTap='cleanCache'>
-        <view class='weui-cell__bd'>
+      </view>
+      <view class='weui-cells weui-cells_after-title'>
+        <view class='weui-cell weui-cell_access' hover-class='weui-cell_active' onTap='cleanCache'>
+          <view class='weui-cell__bd'>
           清空缓存
-        </view>
-        <view class='weui-cell__ft'>
+          </view>
+          <view class='weui-cell__ft'>
           {{cacheSize || ''}}
+          </view>
         </view>
-      </view>
-      <view class='weui-cell weui-cell_access weui-cell_warn' hover-class='weui-cell_active' onTap='cleanExam'>
-        <view class='weui-cell__bd'>
+        <view class='weui-cell weui-cell_access weui-cell_warn' hover-class='weui-cell_active' onTap='cleanExam'>
+          <view class='weui-cell__bd'>
           重置答题数据
-        </view>
-        <view class='weui-cell__ft'>
+          </view>
+          <view class='weui-cell__ft'>
+          </view>
         </view>
       </view>
-    </view>
-  </view>
-  <view class='page__hd'>
-    <view class='weui-cells__title'>
-      其他
-    </view>
-    <view class='weui-cells weui-cells_after-title rktk'>
-      <navigator url='vip-snactive' class='weui-cell weui-cell_access' hover-class='weui-cell_active'>
-        <view class='weui-cell__hd'>
-          <image src='/images/ic_vip-active.png'>
-          </image>
-        </view>
-        <view class='weui-cell__bd'>
-          激活VIP会员
-        </view>
-        <view class='weui-cell__ft weui-cell__ft_in-access'>
-        </view>
-      </navigator>
     </view>
   </view>
 </view>
-            </view>

@@ -17,10 +17,10 @@
 .tt {
     border: 1rpx solid #a18d62;
     color: #a18d62;
-    padding: 8px 9px;
+    padding: 9px;
     border-radius: 2px;
     position: relative;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .tt:active {

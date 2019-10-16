@@ -1,190 +1,194 @@
 <view class='page-container-classname'>
-                <view class='page' ref='saveChildRef0' onTap='doHideYears'>
-  <view class='filter-hold' hidden='{{filterHold == false}}'>
-  </view>
-  <view class="filter {{filterHold == false ? '' : 'fixed'}}">
-    <view class='weui-flex'>
-      <view class='weui-flex__item'>
-        <view class="s {{filter == 0 ? 'active' : ''}}" data-s='{{0}}' onTap='doFilter'>
+  <view class='page' ref='saveChildRef0' onTap='doHideYears'>
+    <view class='filter-hold' hidden='{{filterHold == false}}'>
+    </view>
+    <view class="filter {{filterHold == false ? '' : 'fixed'}}">
+      <view class='weui-flex'>
+        <view class='weui-flex__item'>
+          <view class="s {{filter == 0 ? 'active' : ''}}" data-s='{{0}}' onTap='doFilter'>
           全部
+          </view>
         </view>
-      </view>
-      <view class='weui-flex__item'>
-        <view class="s {{filter == 1 ? 'active' : ''}}" data-s='{{1}}' onTap='doFilter'>
+        <view class='weui-flex__item'>
+          <view class="s {{filter == 1 ? 'active' : ''}}" data-s='{{1}}' onTap='doFilter'>
           上午题
+          </view>
         </view>
-      </view>
-      <view class='weui-flex__item'>
-        <view class="s {{filter == 2 ? 'active' : ''}}" data-s='{{2}}' onTap='doFilter'>
+        <view class='weui-flex__item'>
+          <view class="s {{filter == 2 ? 'active' : ''}}" data-s='{{2}}' onTap='doFilter'>
           下午题
+          </view>
         </view>
-      </view>
-      <view class='weui-flex__item'>
-        <view class="s {{filter == 10 ? 'active' : ''}}" data-s='{{10}}' onTap='doFilter'>
+        <view class='weui-flex__item'>
+          <view class="s {{filter == 10 ? 'active' : ''}}" data-s='{{10}}' onTap='doFilter'>
           知识点
+          </view>
         </view>
-      </view>
-      <view class='weui-flex__item'>
-        <view class="s {{(filter == 20 || filter > 2000) ? 'active' : ''}}" data-s='{{20}}' catchTap='doShowYears'>
+        <view class='weui-flex__item'>
+          <view class="s {{(filter == 20 || filter > 2000) ? 'active' : ''}}" data-s='{{20}}' catchTap='doShowYears'>
           {{yearsText || '年份'}}
+          </view>
         </view>
       </view>
     </view>
-  </view>
-  <view class='filter-years' hidden='{{yearsHide}}' style='width:{{fyWidth}}px'>
-    <view data-s='{{2019}}' onTap='doFilter'>
+    <view class='filter-years' hidden='{{yearsHide}}' style='width:{{fyWidth}}px'>
+      <view data-s='{{2019}}' onTap='doFilter'>
       2019
-    </view>
-    <view data-s='{{2018}}' onTap='doFilter'>
+      </view>
+      <view data-s='{{2018}}' onTap='doFilter'>
       2018
-    </view>
-    <view data-s='{{2017}}' onTap='doFilter'>
+      </view>
+      <view data-s='{{2017}}' onTap='doFilter'>
       2017
-    </view>
-    <view data-s='{{2016}}' onTap='doFilter'>
+      </view>
+      <view data-s='{{2016}}' onTap='doFilter'>
       2016
-    </view>
-    <view data-s='{{2015}}' onTap='doFilter'>
+      </view>
+      <view data-s='{{2015}}' onTap='doFilter'>
       2015
-    </view>
-    <view data-s='{{2014}}' onTap='doFilter'>
+      </view>
+      <view data-s='{{2014}}' onTap='doFilter'>
       2014
-    </view>
-    <view data-s='{{2013}}' onTap='doFilter'>
+      </view>
+      <view data-s='{{2013}}' onTap='doFilter'>
       2013
-    </view>
-    <view data-s='{{2012}}' onTap='doFilter'>
+      </view>
+      <view data-s='{{2012}}' onTap='doFilter'>
       2012
+      </view>
     </view>
-  </view>
-  <view class='page__hd'>
-    <block a:if='{{subname1 != null && sublist1.length > 0}}'>
-      <view class='weui-cells__title'>
+    <view class='page__hd'>
+      <block a:if='{{subname1 != null && sublist1.length > 0}}'>
+        <view class='weui-cells__title'>
         {{subname1}}
-      </view>
-      <view class='weui-panel weui-panel_access'>
-        <view class='weui-panel__bd'>
-          <navigator a:for='{{sublist1}}' a:key='*this' url='subject?id={{item[0]}}' class='weui-media-box weui-media-box_appmsg rktk-record' hover-class='weui-cell_active'>
-            <view class='weui-media-box__hd weui-media-box__hd_in-appmsg'>
-              <view class='weui-media-box__thumb {{item[12]}}'>
-                <text class='Y'>
+        </view>
+        <view class='weui-panel weui-panel_access'>
+          <view class='weui-panel__bd'>
+            <navigator a:for='{{sublist1}}' a:key='*this' url='subject?id={{item[0]}}' class='weui-media-box weui-media-box_appmsg rktk-record' hover-class='weui-cell_active'>
+              <view class='weui-media-box__hd weui-media-box__hd_in-appmsg'>
+                <view class='weui-media-box__thumb {{item[12]}}'>
+                  <text class='Y'>
                   {{item[10]}}
-                </text>
-                <text class='M'>
+                  </text>
+                  <text class='M'>
                   {{item[11]}}
-                </text>
-              </view>
-            </view>
-            <view class='weui-media-box__bd weui-media-box__bd_in-appmsg'>
-              <view class='weui-media-box__title'>
-                {{item[1]}}
-              </view>
-              <view class='weui-media-box__desc'>
-                {{item[5] == null ? "" : item[5]}}
-              </view>
-              <view class='weui-media-box__info'>
-                <view class='weui-media-box__info__meta'>
-                  考题数                  <text>
-                    {{item[3]}}
                   </text>
                 </view>
-                <view class='weui-media-box__info__meta weui-media-box__info__meta_extra' a:if="{{item[12] == 'T1'}}">
-                  通过率                  <text>
+              </view>
+              <view class='weui-media-box__bd weui-media-box__bd_in-appmsg'>
+                <view class='weui-media-box__title'>
+                {{item[1]}}
+                </view>
+                <view class='weui-media-box__desc'>
+                {{item[5] == null ? "" : item[5]}}
+                </view>
+                <view class='weui-media-box__info'>
+                  <view class='weui-media-box__info__meta'>
+                  考题数
+                    <text>
+                    {{item[3]}}
+                    </text>
+                  </view>
+                  <view class='weui-media-box__info__meta weui-media-box__info__meta_extra' a:if="{{item[12] == 'T1'}}">
+                  通过率
+                    <text>
                     {{item[4]}}%
-                  </text>
-                </view>
-                <view class='weui-media-box__info__meta weui-media-box__info__meta_extra' a:if='{{item[2] == -2}}'>
-                  <text a:if='{{item[2] > 0}}'>
+                    </text>
+                  </view>
+                  <view class='weui-media-box__info__meta weui-media-box__info__meta_extra' a:if='{{item[2] == -2}}'>
+                    <text a:if='{{item[2] > 0}}'>
                     {{item[2]}}学豆
-                  </text>
-                  <text a:if='{{item[2] == 0}}' class='color-base2'>
+                    </text>
+                    <text a:if='{{item[2] == 0}}' class='color-base2'>
                     免费
-                  </text>
-                  <text a:if='{{item[2] == -1}}' class='color-base2'>
+                    </text>
+                    <text a:if='{{item[2] == -1}}' class='color-base2'>
                     (限免)
-                  </text>
-                  <text a:if='{{item[2] == -2}}' class='tag-vip'>
+                    </text>
+                    <text a:if='{{item[2] == -2}}' class='tag-vip'>
                     VIP专享
-                  </text>
+                    </text>
+                  </view>
                 </view>
               </view>
-            </view>
-          </navigator>
+            </navigator>
+          </view>
         </view>
-      </view>
-    </block>
-    <block a:if='{{subname2 != null && sublist2.length > 0}}'>
-      <view class='weui-cells__title'>
+      </block>
+      <block a:if='{{subname2 != null && sublist2.length > 0}}'>
+        <view class='weui-cells__title'>
         {{subname2}}
-      </view>
-      <view class='weui-panel weui-panel_access'>
-        <view class='weui-panel__bd'>
-          <navigator a:for='{{sublist2}}' a:key='*this' url='subject?id={{item[0]}}' class='weui-media-box weui-media-box_appmsg rktk-record' hover-class='weui-cell_active'>
-            <view class='weui-media-box__hd weui-media-box__hd_in-appmsg'>
-              <view class='weui-media-box__thumb T4'>
-                <text class='T'>
+        </view>
+        <view class='weui-panel weui-panel_access'>
+          <view class='weui-panel__bd'>
+            <navigator a:for='{{sublist2}}' a:key='*this' url='subject?id={{item[0]}}' class='weui-media-box weui-media-box_appmsg rktk-record' hover-class='weui-cell_active'>
+              <view class='weui-media-box__hd weui-media-box__hd_in-appmsg'>
+                <view class='weui-media-box__thumb T4'>
+                  <text class='T'>
                   知识点
-                </text>
+                  </text>
+                </view>
               </view>
-            </view>
-            <view class='weui-media-box__bd weui-media-box__bd_in-appmsg'>
-              <view class='weui-media-box__title'>
+              <view class='weui-media-box__bd weui-media-box__bd_in-appmsg'>
+                <view class='weui-media-box__title'>
                 {{item[1]}}
-              </view>
-              <view class='weui-media-box__desc'>
+                </view>
+                <view class='weui-media-box__desc'>
                 {{item[5] == null ? "" : item[5]}}
-              </view>
-              <view class='weui-media-box__info'>
-                <view class='weui-media-box__info__meta'>
-                  考题数                  <text>
+                </view>
+                <view class='weui-media-box__info'>
+                  <view class='weui-media-box__info__meta'>
+                  考题数
+                    <text>
                     {{item[3]}}
-                  </text>
-                </view>
-                <view class='weui-media-box__info__meta weui-media-box__info__meta_extra hide'>
-                  <text a:if='{{item[2] > 0}}'>
+                    </text>
+                  </view>
+                  <view class='weui-media-box__info__meta weui-media-box__info__meta_extra hide'>
+                    <text a:if='{{item[2] > 0}}'>
                     {{item[2]}}学豆
-                  </text>
-                  <text a:if='{{item[2] == 0}}' class='color-base2'>
+                    </text>
+                    <text a:if='{{item[2] == 0}}' class='color-base2'>
                     免费
-                  </text>
-                  <text a:if='{{item[2] == -1}}' class='color-base2'>
+                    </text>
+                    <text a:if='{{item[2] == -1}}' class='color-base2'>
                     (限免)
-                  </text>
-                  <text a:if='{{item[2] == -2}}' class='color-base2'>
+                    </text>
+                    <text a:if='{{item[2] == -2}}' class='color-base2'>
                     (VIP专享)
-                  </text>
+                    </text>
+                  </view>
                 </view>
               </view>
-            </view>
-          </navigator>
+            </navigator>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view a:if='{{showNosubject}}' class='page__bd' style='text-align:center;'>
+      <view class='icon-box'>
+        <icon type='info' size='{{88}}' class=' iconinfo-style 88-style'>
+        </icon>
+        <view class='icon-box__title'>
+        请先选择考试类型
+          <view>
+            <form report-submit='true' data-url='/pages/question/subject-choice?back=1' onSubmit='gotoPage'>
+              <button class='weui-btn link default-style' type='default' formType='submit'>
+              [ 点击选择 ]
+              </button>
+            </form>
+          </view>
         </view>
       </view>
-    </block>
-  </view>
-  <view a:if='{{showNosubject}}' class='page__bd' style='text-align:center;'>
-    <view class='icon-box'>
-      <icon type='info' size='{{88}}' class=' iconinfo-style 88-style'>
+    </view>
+    <view a:elif='{{showNodata}}' class='icon-box'>
+      <icon type='info' size='{{88}}' color='#ccc' class=' iconinfo-style 88-style'>
       </icon>
       <view class='icon-box__title'>
-        请先选择考试类型        <view>
-          <form report-submit='true' data-url='/pages/question/subject-choice?back=1' onSubmit='gotoPage'>
-            <button class='weui-btn link default-style' type='default' formType='submit'>
-              [ 点击选择 ]
-            </button>
-          </form>
-        </view>
+      未找到相关题库
       </view>
     </view>
-  </view>
-  <view a:elif='{{showNodata}}' class='icon-box'>
-    <icon type='info' size='{{88}}' color='#ccc' class=' iconinfo-style 88-style'>
-    </icon>
-    <view class='icon-box__title'>
-      未找到相关题库
+    <view a:elif='{{count_subject && count_question}}' class='foot-count'>
+    {{count_subject}}个题库共包含{{count_question}}道题
     </view>
   </view>
-  <view a:elif='{{count_subject && count_question}}' class='foot-count'>
-    {{count_subject}}个题库共包含{{count_question}}道题
-  </view>
 </view>
-            </view>
