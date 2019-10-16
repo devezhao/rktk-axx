@@ -163,23 +163,21 @@ _Page({
 
       _data = _data.data;
 
-      if (app.GLOBAL_DATA.IS_IOS === true) {
-        _my.navigateTo({
-          url: "./vip-buy-ios?id=" + _data.__id
-        });
-
-        return;
-      }
-
       _data.success = function(res) {
-        app.GLOBAL_DATA.RELOAD_VIP = ["Home"];
-
-        _my.redirectTo({
-          url:
-            "../index/tips?msg=" +
-            that.data.tt.toUpperCase() +
-            "会员开通成功"
-        });
+        if (res.resultCode == 9000) {
+          app.GLOBAL_DATA.RELOAD_VIP = ["Home"];
+          _my.redirectTo({
+            url:
+              "../index/tips?msg=" +
+              that.data.tt.toUpperCase() +
+              "会员开通成功"
+          });
+        } else {
+          _my.showToast({
+            icon: "none",
+            title: "用户取消支付"
+          });
+        }
       };
 
       _data.fail = function(res) {
