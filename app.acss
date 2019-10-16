@@ -1,5 +1,10 @@
 @import "/__antmove/static/app.acss";
 @import "./libs/weui.acss";
+
+button {
+  height: auto;
+}
+
 page, .page {
   background-color: #f7f7f9;
   font-size: 14px;
@@ -590,10 +595,6 @@ button.btn-mask {
 }
 
 /* Fixs AXX */
-
-button {
-  height: auto;
-}
 
 button.primary-style {
   background-color: #4b8ef9 !important;

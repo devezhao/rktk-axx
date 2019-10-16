@@ -20,19 +20,17 @@
     <scroll-view scroll-y='true' scroll-with-animation='true' scroll-into-view='{{viewId}}' style='height:{{viewHeight}}px;margin-top:40px' animation='{{turningData}}' onLongpress='turningStart' onTouchMove='turningMove' onTouchEnd='turningEnd'>
       <view class='page__bd' id='question' style='padding-top:1px'>
         <view class='question'>
-          <custom-rich-text nodes='{{question}}'>
-          </custom-rich-text>
+          <custom-rich-text nodes="{{question}}" />
         </view>
       </view>
       <view class='page__hd' id='answers' style='padding-top:1px'>
         <view class='answer-list'>
-          <view class='rich-item' a:for='{{answer_list}}' a:key='*this' ref-numbers='{{answer_list}}'>
+          <view class='rich-item' a:for='{{answer_list}}' a:key='*this'>
             <view class='q'>
               <view class='k'>
               问题{{item.no}} ({{item.s}}分)
               </view>
-              <custom-rich-text nodes='{{item.q}}'>
-              </custom-rich-text>
+              <custom-rich-text nodes='{{item.q}}'/>
             </view>
             <view class='a'>
               <view class='k'>
@@ -44,15 +42,14 @@
                 [ 立即开通 ]
                 </navigator>
               </view>
-              <custom-rich-text a:else nodes='{{item.a}}'>
-              </custom-rich-text>
+              <custom-rich-text a:else nodes='{{item.a}}' />
             </view>
           </view>
         </view>
       </view>
       <view class='page__hd' id='explain' hidden='{{source_subject == null}}'>
         <view class='explain-source' data-url='/pages/question/subject?id={{source_subject_id}}' onTap='gotoPage'>
-          <icon type='info_circle' size='{{15}}' color='#777' class=' iconinfo_circle-style 15-style'>
+          <icon type='info' size='{{15}}' color='#999' class=' iconinfo_circle-style 15-style'>
           </icon>
         {{source_subject}}
         </view>
@@ -74,8 +71,7 @@
           </block>
           <block a:if="{{explain_freedom == 'LIMIT'}}">
             <view class='explain-limit'>
-              <custom-rich-text nodes='{{explain}}'>
-              </custom-rich-text>
+              <custom-rich-text nodes='{{explain}}' />
               <view class='gradual'>
               </view>
             </view>
@@ -92,10 +88,7 @@
               </view>
             </view>
           </block>
-          <block a:else >
-            <custom-rich-text nodes='{{explain}}'>
-            </custom-rich-text>
-          </block>
+          <custom-rich-text a:else nodes='{{explain}}'/>
         </view>
       </view>
     </scroll-view>

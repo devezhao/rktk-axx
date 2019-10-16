@@ -45,7 +45,7 @@
       </view>
       <view class='page__hd' id='explain' hidden='{{source_subject == null}}'>
         <view class='explain-source' data-url='/pages/question/subject?id={{source_subject_id}}' onTap='gotoPage'>
-          <icon type='info_circle' size='{{15}}' color='#777' class=' iconinfo_circle-style 15-style'>
+          <icon type='info' size='{{15}}' color='#999' class=' iconinfo_circle-style 15-style'>
           </icon>
         {{source_subject}}
         </view>
