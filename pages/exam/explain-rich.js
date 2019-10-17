@@ -169,9 +169,7 @@ _Page({
           isFav: _data.is_fav
         });
 
-        _my.showToast({
-          title: _data.is_fav ? "已加入收藏" : "已取消收藏"
-        });
+        if (_data.is_fav) _my.showToast({ title: "已加入收藏" });
       }
     );
   },

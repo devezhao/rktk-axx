@@ -1,90 +1,88 @@
 @import "../comps/z-sharebox.acss";
 .page {
-    padding-bottom: 55px;
+  padding-bottom: 55px;
 }
 
-.circle,
-.circle-scope {
-    width: 100px;
-    height: 100px;
-    z-index: 1;
+.circle, .circle-scope {
+  width: 100px;
+  height: 100px;
+  z-index: 1;
 }
 
 .circle {
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    text-align: left;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
 }
 
 .circle-scope {
-    position: absolute;
-    color: #d9534f;
-    font-size: 42px;
-    text-align: center;
-    line-height: 100px;
-    margin-left: -4px;
-    transform: translate(7px, 0);
+  position: absolute;
+  color: #d9534f;
+  font-size: 42px;
+  text-align: center;
+  line-height: 100px;
+  margin-left: -4px;
+  transform: translate(7px, 0);
 }
 
 .circle-scope text {
-    font-size: 13px;
-    color: #999;
-    display: inline-block;
-    margin-left: -9px;
-    transform: translate(0, -2px);
+  font-size: 13px;
+  color: #999;
+  display: inline-block;
+  transform: translate(0, -2px);
 }
 
 .circle-scope.pass {
-    color: #4cae4c;
+  color: #4cae4c;
 }
 
 .seqs {
-    padding: 18px;
-    text-align: center;
+  padding: 18px;
+  text-align: center;
 }
 
 .seqs .item {
-    width: 38px;
-    height: 38px;
-    line-height: 38px;
-    color: #fff;
-    border-radius: 50%;
-    margin: 5px 6px;
-    font-size: 18px;
-    text-align: center;
-    background-color: #d9534f;
-    display: inline-block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  color: #fff;
+  border-radius: 50%;
+  margin: 5px 6px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #d9534f;
+  display: inline-block;
 }
 
 .seqs .item.right {
-    background-color: #4cae4c;
+  background-color: #4cae4c;
 }
 
 .fix-foobar .pull-left {
-    width: 50%;
+  width: 50%;
 }
 
 .fix-foobar .pull-left button {
-    border-radius: 0;
-    border-top: 1rpx solid #d9d9d9;
+  border-radius: 0;
+  border-top: 1rpx solid #d9d9d9;
 }
 
 .fix-foobar .pull-left button.split {
-    border-left: 1rpx solid #eee;
+  border-left: 1rpx solid #eee;
 }
 
 .exp-tips {
-    text-align: center;
-    margin-bottom: 7px;
+  text-align: center;
+  margin-bottom: 7px;
 }
 
 .exp-tips view {
-    color: #aaa;
-    font-size: 12px;
-    background-color: rgba(255, 255, 255, 0.4);
-    display: inline-block;
-    padding: 3px 7px;
-    border-radius: 99px;
-    line-height: 1;
+  color: #aaa;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 99px;
+  line-height: 1;
 }

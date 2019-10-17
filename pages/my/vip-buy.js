@@ -50,14 +50,24 @@ _Page({
       this.setData({
         urlMsg: e.msg
       });
-      setTimeout(() => {
-        _my.showModal({
-          title: "提示",
-          content: e.msg,
-          showCancel: false,
-          confirmText: "知道了"
-        });
-      }, 1000);
+
+
+      my.getStorage({
+        key: 'urlMsgOnModal',
+        success: (res) => {
+          if (res.data) return
+          console.log(res)
+          setTimeout(() => {
+            _my.showModal({
+              title: "提示",
+              content: e.msg,
+              showCancel: false,
+              confirmText: "知道了"
+            });
+            my.setStorage({ key: 'urlMsgOnModal', data: '1' });
+          }, 1000);
+        }
+      });
     }
   },
   onShow: function(e) {
